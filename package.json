@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Aqually/MeteoFacile.git"
+    "url": "git+https://github.com/Aqually/react-starter-kit.git"
   },
   "author": "votre nom",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Aqually/MeteoFacile/issues"
+    "url": "https://github.com/Aqually/react-starter-kit/issues"
   },
-  "homepage": "https://github.com/Aqually/MeteoFacile#readme",
+  "homepage": "https://github.com/Aqually/react-starter-kit#readme",
   "dependencies": {
       "axios": "^0.15.3",
       "react": "^15.4.1",
