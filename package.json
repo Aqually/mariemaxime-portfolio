@@ -1,7 +1,7 @@
 {
-  "name": "meteofacile",
+  "name": "Votre Projet",
   "version": "1.0.0",
-  "description": "voir la meteo d'une ville",
+  "description": "description du projet",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/Aqually/MeteoFacile.git"
   },
-  "author": "Marie-Maxime Tanguay",
+  "author": "votre nom",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Aqually/MeteoFacile/issues"
