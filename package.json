@@ -1,7 +1,7 @@
 {
-  "name": "votre_projet",
+  "name": "mariemaxime.me",
   "version": "1.0.0",
-  "description": "description du projet",
+  "description": "portfolio de Marie-Maxime Tanguay",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Aqually/react-starter-kit.git"
+    "url": "git+https://github.com/Aqually/mariemaxime-blog.git"
   },
-  "author": "votre nom",
+  "author": "Marie-Maxime Tanguay",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Aqually/react-starter-kit/issues"
