@@ -14,9 +14,9 @@
   "author": "Marie-Maxime Tanguay",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Aqually/react-starter-kit/issues"
+    "url": "https://github.com/Aqually/mariemaxime-blog/issues"
   },
-  "homepage": "https://github.com/Aqually/react-starter-kit#readme",
+  "homepage": "https://github.com/Aqually/mariemaxime-blog#readme",
   "dependencies": {
     "axios": "^0.15.3",
     "react": "^15.4.1",
