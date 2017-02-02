@@ -16,7 +16,7 @@ module.exports = {
         filename: "index_bundle.js"
     },
 
-    plugins:[
+    plugins:[/*
     new webpack.DefinePlugin({
         'process.env':{
             'NODE_ENV': JSON.stringify('production')
@@ -26,14 +26,16 @@ module.exports = {
         compress:{
             warnings: true
         }
-    }),
+    }),*/
     HTMLWebpackPluginConfig
     ],
 
     module: {
         loaders: [
-          {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
-          {test: /\.css$/, loader: "style-loader!css-loader"}
+          { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
+          { test: /\.css$/, loader: "style-loader!css-loader"},
+          { test: /\.(png|jpg)$/, loader: 'file-loader?name=images/[name].[ext]' },
+          { test: /\.woff$/, loader: 'file-loader?name=fonts/[name].[ext]' }
         ]
     },
 };

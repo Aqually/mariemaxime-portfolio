@@ -1,10 +1,15 @@
 import React, {Component} from "react";
 import Header from "./Header"
+import Menu from "./Menu"
+require("../style.css");
 
 export default class Main extends Component {
   render() {
     return (
-      <Header />
+        <div>
+            <Menu />
+            <Header />
+        </div>
     );
   }
 }
