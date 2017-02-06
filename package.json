@@ -24,6 +24,7 @@
     },
     "homepage": "https://github.com/Aqually/mariemaxime-blog#readme",
     "dependencies": {
+        "webpack": "^1.14.0",
         "axios": "^0.15.3",
         "react": "^15.4.1",
         "react-addons-css-transition-group": "^15.4.1",
@@ -41,7 +42,6 @@
         "file-loader": "^0.10.0",
         "html-webpack-plugin": "^2.26.0",
         "style-loader": "^0.13.1",
-        "webpack": "^1.14.0",
         "webpack-dev-server": "^1.16.2"
     }
 }
