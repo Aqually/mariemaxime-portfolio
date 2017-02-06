@@ -5,8 +5,8 @@ export default class Menu extends Component{
         return (
             <nav>
                 <ul>
-                    <li><a href="#">Introduction</a></li>
                     <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Compétences</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>

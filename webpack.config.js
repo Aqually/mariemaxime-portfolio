@@ -16,7 +16,7 @@ module.exports = {
         filename: "index_bundle.js"
     },
 
-    plugins:[/*
+    plugins:[
     new webpack.DefinePlugin({
         'process.env':{
             'NODE_ENV': JSON.stringify('production')
@@ -26,7 +26,7 @@ module.exports = {
         compress:{
             warnings: true
         }
-    }),*/
+    }),
     HTMLWebpackPluginConfig
     ],
 

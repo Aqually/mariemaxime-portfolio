@@ -4,8 +4,11 @@
   "description": "portfolio de Marie-Maxime Tanguay",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "production": "webpack -p"
+    "dev": "webpack-dev-server",
+    "production": "webpack -p",
+    "postinstall": "webpack -p",
+    "start":"node server.js"
+
   },
   "repository": {
     "type": "git",

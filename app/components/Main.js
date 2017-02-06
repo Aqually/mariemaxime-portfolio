@@ -8,9 +8,12 @@ export default class Main extends Component {
   render() {
     return (
         <main>
-            <Header />
-            <Menu />
-            <Description />
+            <div id="intro">
+
+                <Header />
+                <Description />
+                                <Menu />
+            </div>
         </main>
     );
   }
