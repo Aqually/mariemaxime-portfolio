@@ -9,10 +9,10 @@ export default class Main extends Component {
     return (
         <main>
             <div id="intro">
-
+                <Menu />
                 <Header />
                 <Description />
-                                <Menu />
+
             </div>
         </main>
     );
