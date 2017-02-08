@@ -2,7 +2,9 @@
 
 //les fonts
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Paytone+One');
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
 
 html,body,main, #app{
    width: 100%;
@@ -12,8 +14,8 @@ html,body,main, #app{
 
 body{
    font-family: "Open Sans";
-   background-color: gray;
-   background-image: url("img/bg.png");
+   background-color: black;
+   //background-image: url("img/bg.png");
    color: black;
 }
 
@@ -31,7 +33,7 @@ body {
 
 /***** HEADER   *****/
 header{
-   text-align: center;
+   text-align: left;
    margin: 0 auto;
    width: 100%;
 }
@@ -47,51 +49,56 @@ header div{
 h1,h2,h3{
    margin: 0;
    color: #5a5a5a;
-   padding: 0.1em;
-   text-shadow: -2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF
+   padding: 0;
 }
 
 h1{
-   font-family: 'Paytone One', sans-serif;
-   font-size: 2em;
+   margin-top: 0.25em;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 900;
+   font-size: 6.8em;
+   color: #efefef;
+   text-align: left;
+   width: 100%;
+   line-height: 0.8em;
 }
 
 h2{
-   font-size: 1em;
-   font-family: "Open Sans";
+   margin-top: 0.8em;
+   color: #efefef;
+   font-size: 1.8em;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 900;
+   text-align: left;
+   width: 50%;
+   line-height: 1em;
 }
 
 
 
 /********* Article description ***///
 
-
-
-article {
-   margin: 1em auto;
-
-   width: 93%;
-   opacity: 0.65;
+#intro{
+   padding-top: 5em;
 }
 
-article div {
-   padding-left: 0.5em;
-   padding-right: 0.5em;
-   padding-top: 0.10em;
-   padding-bottom: 0.10em;
-   font-size: 1em;
+
+#intro h1, #intro h2, #intro p{
+   margin-left: 15px;
+}
+
+#intro article p{
+   color: #efefef;
    font-family: "Roboto";
+   font-weight: 100;
+   font-size: 1.7em;
+   width: 65%;
+   line-height: 1.25em;
+   letter-spacing: 0.15em;
 }
 
-article div p {
-   color: lighten(black,20%);
-   line-height: 1.75em;
-   letter-spacing: 0.015em;
-   word-spacing: 0.25em;
-}
-
-article div p:first-of-type{
-   margin: 0;
-   padding-top: 0.4em;
-   font-size: 1.25em;
+#intro img{
+   display: block;
+   margin: 1.5em auto;
+   width: 60%;
 }

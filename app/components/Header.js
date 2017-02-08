@@ -5,8 +5,8 @@ export default class Header extends Component{
         return (
             <header>
                 <div>
-                    <h1>MarieMarieme.me</h1>
-                    <h2>Développeuse Web</h2>
+                    <h1>Marie-Maxime</h1>
+                    <h2>développeuse web</h2>
                 </div>
             </header>
         )

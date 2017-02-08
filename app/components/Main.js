@@ -8,11 +8,10 @@ export default class Main extends Component {
   render() {
     return (
         <main>
+            <Menu />
             <div id="intro">
-                <Menu />
                 <Header />
                 <Description />
-
             </div>
         </main>
     );
