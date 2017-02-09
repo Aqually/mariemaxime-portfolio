@@ -1,7 +1,13 @@
 // main: main.less
 
+
+///
+/// basé sur https://scotch.io/tutorials/building-a-morphing-hamburger-menu-with-css
+///
+
+
 .container {
-   top: 0;
+    top: 0;
     position: fixed;
     width: 100%;
     height: initial;
@@ -30,7 +36,7 @@
 }
 
 #toggle:checked ~ .nav {
-    margin-bottom: 100px;
+    margin-bottom: 120px;
     pointer-events: auto;
     -webkit-transform: translate(100px, 50px);
     -ms-transform: translate(100px, 50px);
@@ -39,12 +45,13 @@
 
 #toggle:checked ~ .nav .nav-item {
     color: black;
-    letter-spacing: 0.09em;
-        font-size: 1.15em;
+    letter-spacing: 0.25em;
+        font-size: 1.5em;
         height: 2em;
-        line-height: 2em;
+        line-height: 2.5em;
         margin-top: 0;
     margin-top: 0;
+    margin-bottom: 0.5em;
     opacity: 1;
     -webkit-transform: scaleY(1);
     -ms-transform: scaleY(1);
@@ -108,9 +115,10 @@
 .button-toggle {
     position: absolute;
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin: 25px;
+    width: 25px;
+    height: 25px;
+    margin-left: 8px;
+    margin-top: 18px;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -151,7 +159,7 @@
 /* Menu */
 .nav {
     display: inline-block;
-    margin: 25px 25px 20px;
+  margin: 20px 10px 10px;
     pointer-events: none;
     -webkit-transition: 0.5s;
     transition: 0.5s;
