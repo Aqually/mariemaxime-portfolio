@@ -1,16 +1,18 @@
-import React, {Component} from 'react';
-import {render} from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import Main from "./components/Main"
 require("./style.css");
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import reducers from './reducers';
+import promise from "redux-promise";
+import reduxThunk from 'redux-thunk';
 
-class App extends Component {
-  render () {
-    return (
-        <Main>
-            {this.props.childen}
-        </Main>
-    )
-  }
-}
+const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 
-render(<App/>, document.getElementById('app'));
+ReactDOM.render(
+  <Provider store={createStoreWithMiddleware(reducers)}>
+      <Main />
+  </Provider>
+  , document.getElementById('app')
+);

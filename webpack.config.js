@@ -36,6 +36,9 @@ module.exports = {
           { test: /\.css$/, loader: "style-loader!css-loader"},
           { test: /\.(png|jpg)$/, loader: 'file-loader?name=images/[name].[ext]' },
           { test: /\.woff$/, loader: 'file-loader?name=fonts/[name].[ext]' }
-        ]
+      ],
+      query: {
+        presets: ['react', 'es2015', 'stage-1']
+      }
     },
 };
