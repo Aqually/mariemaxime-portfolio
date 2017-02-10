@@ -6,15 +6,14 @@ import Projets from "./Projets";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import {connect} from "react-redux";
-import {fetchData} from "../actions/index";
+import {fetchData} from "../actions";
 
 class Main extends Component {
-
-    state = { portfolio: '' };
 
     componentWillMount() {
         this.props.fetchData();
     }
+
 
     render() {
         return (
@@ -26,20 +25,20 @@ class Main extends Component {
                 </section>
                 <section id="sectionProjet">
                     <h2>Mes Projets</h2>
-                    <Projets/>
+                    <Projets value={this.props.portfolio.projets}/>
                 </section>
                 <section id="contact">
                     <h2>Contacte-moi</h2>
                     <Contact/>
                 </section>
-                <Footer/>
             </main>
         );
     }
 }
 
 function mapStateToProps(state){
-    return {portfolio: state.portfolio};
+    return {portfolio: state.portfolio}
+
 }
 
-export default connect(mapStateToProps,fetchData)(Main);
+export default connect(mapStateToProps,{fetchData})(Main);

@@ -11,6 +11,7 @@ const style = {
 
 export default class Projets extends Component{
     render(){
+        console.log(this.props)
         return (
             <article className="projet" style={style}>
                 <div>

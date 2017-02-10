@@ -7,11 +7,10 @@ const config = {
 };
 
 Firebase.initializeApp(config);
-const database = Firebase.database();
-console.log(database)
+const database = Firebase.database().ref();
 export function fetchData(){
     return dispatch => {
-        database.on("value", snap =>{
+        database.on("value", snapshot =>{
             dispatch({
                 type: FETCH_PORTFOLIO,
                 payload: snapshot.val()
