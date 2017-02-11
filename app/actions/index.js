@@ -8,7 +8,8 @@ const config = {
 
 Firebase.initializeApp(config);
 const database = Firebase.database().ref();
-export function fetchData(){
+
+export function fetchPortFolio(){
     return dispatch => {
         database.on("value", snapshot =>{
             dispatch({
