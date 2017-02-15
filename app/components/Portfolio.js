@@ -19,8 +19,9 @@ export default class Portfolio extends Component {
             let list = document.getElementsByClassName("projet")
             console.log(list);
             for (let i = 0; i < list.length; i++){
-                list[i].setAttribute(" style ", " height : " + vH + " px;");
-                list[i].setAttribute(" style ", " max-height : " + vH + " px;");
+                list[i].style.height = vH + "px";
+                list[i].style.maxHeight = vH + "px";
+                list[i].style.minHeight = vH + "px";
             }
         }
         calcVH();
