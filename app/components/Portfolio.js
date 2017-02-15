@@ -13,11 +13,14 @@ export default class Portfolio extends Component {
     }
 
     fixVH() {
+        console.log("???");
         function calcVH() {
             let vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
             let list = document.getElementsByClassName("projet")
+            console.log(list);
             for (let i = 0; i < list.length; i++){
                 list[i].setAttribute(" style ", " height : " + vH + " px;");
+                list[i].setAttribute(" style ", " max-height : " + vH + " px;");
             }
         }
         calcVH();
