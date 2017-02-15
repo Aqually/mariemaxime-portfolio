@@ -3,6 +3,16 @@ import React, {Component} from "react";
 import Projets from "./Projets";
 import _ from 'lodash';
 
+function calcVH() {
+    let vH = window.innerHeight;
+    let list = document.getElementsByClassName("projet")
+    for (let i = 0; i < list.length; i++){
+        list[i].style.height = vH + "px";
+        list[i].style.maxHeight = vH + "px";
+        list[i].style.minHeight = vH + "px";
+    }
+}
+
 export default class Portfolio extends Component {
 
     renderProjets() {
@@ -12,18 +22,7 @@ export default class Portfolio extends Component {
         });
     }
 
-    fixVH() {
-        console.log("???");
-        function calcVH() {
-            let vH = window.innerHeight;
-            let list = document.getElementsByClassName("projet")
-            console.log(list);
-            for (let i = 0; i < list.length; i++){
-                list[i].style.height = vH + "px";
-                list[i].style.maxHeight = vH + "px";
-                list[i].style.minHeight = vH + "px";
-            }
-        }
+    componentDidMount(){
         calcVH();
         window.addEventListener('resize', calcVH, true);
         window.addEventListener('onorientationchange', calcVH, true);
@@ -34,7 +33,6 @@ export default class Portfolio extends Component {
             <section id="sectionProjet">
                 <h2>{this.props.projets.titre}</h2>
                 { this.renderProjets() }
-                {this.fixVH()}
             </section>
         )
     }
