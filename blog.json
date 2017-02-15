@@ -1,0 +1,100 @@
+{
+    "intro": {
+        "image": {
+            "url":"#",
+            "alt":"Marie-Maxime Tanguay"
+        },
+        "sousTitre": "développeuse web",
+        "texte": "JavaScript, CSS, ReactJS, Redux, PHP, WordPress",
+        "titre": "Marie-Maxime"
+    },
+
+    "menu":{
+        "profil":{
+            "url":"#",
+            "titre":"Profil",
+            "id":1
+        },
+
+        "portfolio":{
+            "url":"#",
+            "titre":"Portfolio",
+            "id":2
+        },
+
+        "contact":{
+            "url":"#",
+            "titre":"Contacte",
+            "id":3
+        }
+    },
+
+    "projets": {
+        "titre":"Mes Projets",
+        "listeProjets":{
+            "tetrabloc": {
+                "titre": "Tetra Bloc",
+                "description": "Jeu de bloc réaliser avec PhaserJS basé sur Tetris",
+                "lien": "",
+                "github": "",
+                "classe":"tetrabloc",
+                "id":1
+            },
+            "tim": {
+                "titre": "TIM Maisonneuve",
+                "description": "Refonte du site départementale du TIM à Maisonneuve",
+                "lien": "",
+                "github": "",
+                "classe":"tim",
+                "id":2
+            },
+            "rollin": {
+                "titre": "Boutique Rollin",
+                "description": "Refonte du design d'un site de planche à roulette",
+                "lien": "",
+                "github": "",
+                "classe":"rollin",
+                "id":3
+            },
+            "ascension": {
+                "titre": "Ascension de la Nature",
+                "description": "Site web sur un prototype de jeu sur le thème de l'environnement",
+                "lien": "",
+                "github": "",
+                "classe":"ascension",
+                "id":4
+            },
+            "escargo": {
+                "titre": "Escargo Express",
+                "description": "Jeu de carte réalisé avec JavaScript et Jquery en programmation orienté objet",
+                "lien": "",
+                "github": "",
+                "classe":"escargo",
+                "id":5
+            },
+            "area51": {
+                "titre": "Area 51",
+                "description": "Jeu de tire 3d à la première personne réalisé avec Unity3D",
+                "lien": "",
+                "github": "",
+                "classe":"area",
+                "id":6
+            },
+            "poppy": {
+                "titre": "Poppy",
+                "description": "Jeu d'aventure en 3D créé avec Unity3D",
+                "lien": "",
+                "github": "",
+                "classe":"poppy",
+                "id":7
+            }
+        }
+    },
+
+    "contact":{
+        "titre":"Contacte-moi",
+        "nom":"Votre nom",
+        "couriel":"Votre adresse couriel",
+        "message":"Votre message"
+    }
+}

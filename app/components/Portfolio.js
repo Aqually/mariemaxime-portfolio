@@ -1,37 +1,23 @@
 // classe
 import React, {Component} from "react";
 import Projets from "./Projets";
-import {connect} from "react-redux";
-import {fetchPortFolio} from "../actions";
 import _ from 'lodash';
 
-class Portfolio extends Component{
+export default class Portfolio extends Component {
 
-    componentWillMount() {
-        this.props.fetchPortFolio();
-    }
-
-    renderProjets(){
-        return _.map(this.props.portfolio.projets, (projet, key) => {
-          return <Projets key={key} projet={projet}/>
+    renderProjets() {
+        const projets = _.sortBy(this.props.projets.listeProjets, 'id');
+        return _.map(projets, (projet, key) => {
+            return <Projets key={projet.id} projet={projet}/>
         });
     }
 
-    render(){
-        if(this.props.portfolio.projets === undefined){
-
-            return (<div>Loading</div>)
-        }
+    render() {
         return (
-            <div>
-                {this.renderProjets()}
-            </div>
+            <section id="sectionProjet">
+                <h2>{this.props.projets.titre}</h2>
+                { this.renderProjets() }
+            </section>
         )
     }
 }
-
-function mapStateToProps(state){
-    return {portfolio: state.portfolio}
-}
-
-export default connect(mapStateToProps,{fetchPortFolio})(Portfolio);

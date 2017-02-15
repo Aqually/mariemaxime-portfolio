@@ -1,30 +1,35 @@
 import React, {Component} from "react";
-import Header from "./Header"
-import Menu from "./Menu"
-import Description from "./Description";
+import Menu from "./Menu";
+import Intro from "./Intro";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import {connect} from "react-redux";
+import {fetchPortFolio} from "../actions";
 
-export default class Main extends Component {
+class Main extends Component {
+
+    componentWillMount() {
+        this.props.fetchPortFolio();
+    }
 
     render() {
+        if(this.props.portfolio.menu === undefined){
+            return (<div></div>);
+        }
         return (
             <main>
-                <Menu/>
-                <section id="intro">
-                    <Header/>
-                    <Description/>
-                </section>
-                <section id="sectionProjet">
-                    <h2>Mes Projets</h2>
-                    <Portfolio projets={this.props.portfolio}/>
-                </section>
-                <section id="contact">
-                    <h2>Contacte-moi</h2>
-                    <Contact/>
-                </section>
+                <Menu menu={this.props.portfolio.menu} />
+                <Intro intro={this.props.portfolio.intro} />
+                <Portfolio projets={this.props.portfolio.projets} />
+                <Contact contact={this.props.portfolio.contact} />
             </main>
         );
     }
 }
+
+function mapStateToProps(state){
+    return {portfolio: state.portfolio}
+}
+
+export default connect(mapStateToProps,{fetchPortFolio})(Main);

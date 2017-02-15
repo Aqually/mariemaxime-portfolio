@@ -9,8 +9,8 @@ export default class Description extends Component{
     render(){
         return (
             <article>
-                <img src={imgMarie} alt="Mari-Maxime Tanguay" title="Marie-Maxime Tanguay" />
-                <p>JavaScript, CSS, ReactJS, Redux, PHP, WordPress</p>
+                <img src={imgMarie} alt={this.props.image.alt} title={this.props.image.alt} />
+                <p>{this.props.description}</p>
             </article>
         )
     }

@@ -11,9 +11,9 @@ export default class Menu extends Component{
                 </label>
 
                 <nav className="nav">
-                    <a className="nav-item" href="">Profil</a>
-                    <a className="nav-item" href="">Portfolio</a>
-                    <a className="nav-item" href="">Contact</a>
+                    <a className="nav-item" href="">{this.props.menu.profil.titre}</a>
+                    <a className="nav-item" href="">{this.props.menu.portfolio.titre}</a>
+                    <a className="nav-item" href="">{this.props.menu.contact.titre}</a>
                 </nav>
             </div>
         )
