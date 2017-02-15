@@ -14,7 +14,7 @@ const database = Firebase.database().ref();
 //fonction pour fetch les donner des firebase
 export function fetchPortFolio(){
     return dispatch => {
-        database.on("value", snapshot =>{
+        database.once("value", snapshot =>{
             dispatch({
                 type: FETCH_PORTFOLIO,
                 payload: snapshot.val()

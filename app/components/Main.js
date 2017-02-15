@@ -11,6 +11,7 @@ class Main extends Component {
 
     componentWillMount() {
         this.props.fetchPortFolio();
+        console.log(this.props.portfolio === undefined);
     }
 
     render() {
