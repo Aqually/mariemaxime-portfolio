@@ -4,11 +4,10 @@ import Projets from "./Projets";
 import _ from 'lodash';
 
 function calcVH() {
-    let vH = screen.height;
+    let vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    console.log(vH);
     let list = document.getElementsByClassName("projet")
     for (let i = 0; i < list.length; i++){
-        list[i].style.top = 'auto';
-        list[i].style.bottom = 0;
         list[i].style.height = vH;
         list[i].style.maxHeight = vH;
         list[i].style.minHeight = vH;
