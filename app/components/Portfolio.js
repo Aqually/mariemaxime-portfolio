@@ -25,7 +25,6 @@ export default class Portfolio extends Component {
 
     componentDidMount(){
         calcVH();
-        window.addEventListener('resize', calcVH, true);
         window.addEventListener('onorientationchange', calcVH, true);
     }
 
