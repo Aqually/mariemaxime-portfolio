@@ -1,17 +1,20 @@
 import React, {Component} from "react";
-
-const twitter = require("../icons/twitter-logo.png")
-const github = require("../icons/github-logo.png")
-const linkedin = require("../icons/linkedin-logo.png")
+import _ from 'lodash';
 
 export default class Footer extends Component{
+
+    renderMediaSociaux(){
+        const medias = this.props.footer;
+        return _.map(medias, (media, key) => {
+            return (<li key={media.class}><a href={media.url}><i className={"fa fa-" + media.class} aria-hidden="true"></i></a></li>);
+        });
+    }
+
     render(){
         return (
             <footer>
                 <ul>
-                    <li><a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i className="fa fa-github" aria-hidden="true"></i></a></li>
+                    {this.renderMediaSociaux()}
                 </ul>
             </footer>
         )

@@ -11,7 +11,6 @@ class Main extends Component {
 
     componentWillMount() {
         this.props.fetchPortFolio();
-        console.log(this.props.portfolio === undefined);
     }
 
     render() {
@@ -24,6 +23,7 @@ class Main extends Component {
                 <Intro intro={this.props.portfolio.intro} />
                 <Portfolio projets={this.props.portfolio.projets} />
                 <Contact contact={this.props.portfolio.contact} />
+                <Footer footer={this.props.portfolio.footer}/>
             </main>
         );
     }

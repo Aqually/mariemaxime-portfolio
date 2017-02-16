@@ -1,100 +1,115 @@
 {
     "intro": {
         "image": {
-            "url":"#",
-            "alt":"Marie-Maxime Tanguay"
+            "url": "#",
+            "alt": "Marie-Maxime Tanguay"
         },
         "sousTitre": "développeuse web",
         "texte": "JavaScript, CSS, ReactJS, Redux, PHP, WordPress",
         "titre": "Marie-Maxime"
     },
 
-    "menu":{
-        "profil":{
-            "url":"#",
-            "titre":"Profil",
-            "id":1
+    "menu": {
+        "profil": {
+            "url": "#",
+            "titre": "Profil",
+            "id": 1
         },
 
-        "portfolio":{
-            "url":"#",
-            "titre":"Portfolio",
-            "id":2
+        "portfolio": {
+            "url": "#",
+            "titre": "Portfolio",
+            "id": 2
         },
 
-        "contact":{
-            "url":"#",
-            "titre":"Contacte",
-            "id":3
+        "contact": {
+            "url": "#",
+            "titre": "Contacte",
+            "id": 3
         }
     },
 
     "projets": {
-        "titre":"Mes Projets",
-        "listeProjets":{
+        "titre": "Mes Projets",
+        "listeProjets": {
             "tetrabloc": {
                 "titre": "Tetra Bloc",
                 "description": "Jeu de bloc réaliser avec PhaserJS basé sur Tetris",
                 "lien": "http://mariemaxime.me/portfolio/anim3/",
                 "github": "https://github.com/Aqually/TetraBlock",
-                "classe":"tetrabloc",
-                "id":1
+                "classe": "tetrabloc",
+                "id": 1
             },
             "tim": {
                 "titre": "TIM Maisonneuve",
                 "description": "Refonte du site départementale du TIM à Maisonneuve",
                 "lien": "http://tim4.mariemt.webfactional.com/",
                 "github": "#",
-                "classe":"tim",
-                "id":2
+                "classe": "tim",
+                "id": 2
             },
             "rollin": {
                 "titre": "Boutique Rollin",
                 "description": "Refonte du design d'un site de planche à roulette",
                 "lien": "http://mariemaxime.me/portfolio/design3/",
                 "github": "#",
-                "classe":"rollin",
-                "id":3
+                "classe": "rollin",
+                "id": 3
             },
             "ascension": {
                 "titre": "Ascension de la Nature",
                 "description": "Site web sur un prototype de jeu sur le thème de l'environnement",
                 "lien": "http://mariemaxime.me/portfolio/design3/",
                 "github": "#",
-                "classe":"ascension",
-                "id":4
+                "classe": "ascension",
+                "id": 4
             },
             "escargo": {
                 "titre": "Escargo Express",
                 "description": "Jeu de carte réalisé avec JavaScript et Jquery en programmation orienté objet",
                 "lien": "http://mariemaxime.me/portfolio/anim2/",
                 "github": "https://github.com/Aqually/Escargo-Express",
-                "classe":"escargo",
-                "id":5
+                "classe": "escargo",
+                "id": 5
             },
             "area51": {
                 "titre": "Area 51",
                 "description": "Jeu de tire 3d à la première personne réalisé avec Unity3D",
                 "lien": "http://jeu.tim.cmaisonneuve.qc.ca/galerie_unity/assemblagejeu/h2016/Area53_WebGL/",
                 "github": "#",
-                "classe":"area",
-                "id":6
+                "classe": "area",
+                "id": 6
             },
             "poppy": {
                 "titre": "Poppy",
                 "description": "Jeu d'aventure en 3D créé avec Unity3D",
                 "lien": "#",
                 "github": "#",
-                "classe":"poppy",
-                "id":7
+                "classe": "poppy",
+                "id": 7
             }
         }
     },
 
-    "contact":{
-        "titre":"Contacte-moi",
-        "nom":"Votre nom",
-        "couriel":"Votre adresse couriel",
-        "message":"Votre message"
+    "contact": {
+        "titre": "Contacte-moi",
+        "nom": "Votre nom",
+        "couriel": "Votre adresse couriel",
+        "message": "Votre message"
+    },
+
+    "footer": {
+        "github": {
+            "url": "https://github.com/aqually",
+            "class": "github"
+        },
+        "twitter": {
+            "url": "https://twitter.com/AlpacaPink",
+            "class": "twitter"
+        },
+        "linkedin": {
+            "url": "https://www.linkedin.com/in/marie-maxime-tanguay-a9436b104/",
+            "class": "linkedin"
+        }
     }
 }

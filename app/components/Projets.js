@@ -7,7 +7,7 @@ export default class Projets extends Component {
 
     render() {
         return (
-            <article className={["projet", this.props.projet.classe].join(' ')}>
+            <article className={"projet " + this.props.projet.classe}>
                 <div>
                     <h3>{this.props.projet.titre}</h3>
                     <p>{this.props.projet.description}</p>

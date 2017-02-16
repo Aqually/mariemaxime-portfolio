@@ -1,6 +1,16 @@
 import React, {Component} from "react";
+import _ from 'lodash';
 
 export default class Menu extends Component{
+
+    renderListeMenu(){
+        const liens = _.sortBy(this.props.menu, 'id');
+        return _.map(liens, (lien, key) => {
+            return (<li key={lien.titre}><a className="nav-item" href="#">{lien.titre}</a></li>);
+        });
+    }
+
+
     render(){
         return (
             <div className="container">
@@ -11,9 +21,7 @@ export default class Menu extends Component{
                 </label>
 
                 <nav className="nav">
-                    <a className="nav-item" href="">{this.props.menu.profil.titre}</a>
-                    <a className="nav-item" href="">{this.props.menu.portfolio.titre}</a>
-                    <a className="nav-item" href="">{this.props.menu.contact.titre}</a>
+                    {this.renderListeMenu()}
                 </nav>
             </div>
         )

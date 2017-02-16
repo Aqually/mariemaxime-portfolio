@@ -3,6 +3,7 @@ import React, {Component} from "react";
 import Projets from "./Projets";
 import _ from 'lodash';
 
+//fonction pour corrigé le bug de view height sur mobile
 function calcVH() {
     let vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     console.log(vH);
