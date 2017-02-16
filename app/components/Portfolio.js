@@ -8,9 +8,9 @@ function calcVH() {
     console.log(vH);
     let list = document.getElementsByClassName("projet")
     for (let i = 0; i < list.length; i++){
-        list[i].style.height = vH;
-        list[i].style.maxHeight = vH;
-        list[i].style.minHeight = vH;
+        list[i].style.height = vH + "px";
+        list[i].style.maxHeight = vH + "px";
+        list[i].style.minHeight = vH + "px";
     }
 }
 
