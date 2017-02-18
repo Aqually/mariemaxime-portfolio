@@ -24,12 +24,13 @@ export default class Portfolio extends Component {
     }
 
     componentDidMount(){
+        console.log("test");
         this.changerHeightDesProjets();
-        window.addEventListener('orientationchange', this.changerHeightDesProjets.bind(this), true);
+        window.addEventListener('resize', this.changerHeightDesProjets.bind(this), true);
     }
 
     componentWillUnmount(){
-        window.removeEventListener('orientationchange', this.changerHeightDesProjets.bind(this), true);
+        window.removeEventListener('resize', this.changerHeightDesProjets.bind(this), true);
     }
 
     render() {
