@@ -26,18 +26,19 @@ export default class Portfolio extends Component {
         const largeurEcran = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
         const lesProjets = document.getElementsByClassName("projet")
         for (let i = 0; i < lesProjets.length; i++) {
-            lesProjets[i].style.maxHeight = hauteurEcran + "px";
-            lesProjets[i].style.minHeight = largeurEcran + "px";
+            if(hauteurEcran > largeurEcran){
+                lesProjets[i].style.maxHeight = hauteurEcran + "px";
+                lesProjets[i].style.minHeight = largeurEcran + "px";
+            }else{
+                lesProjets[i].style.maxHeight = largeurEcran + "px";
+                lesProjets[i].style.minHeight = hauteurEcran + "px";
+            }
+
         }
     }
 
     componentDidMount() {
         this.changerHeightDesProjets();
-
-    }
-
-    componentWillUnmount() {
-
     }
 
     render() {
