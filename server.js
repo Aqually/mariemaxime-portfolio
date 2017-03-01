@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 
 
 // create reusable transporter object using the default SMTP transport
-var smtpTransport = nodemailer.createTransport({
+var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: 'mariemaximeblog@gmail.com',
@@ -32,12 +32,12 @@ app.post('/contact', function(req, res) {
     console.log(req.body);
     var data = req.body;
     console.log(data);
-    smtpTransport.sendMail(mailOptions, (error, info) => {
+    transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             return console.log(error);
         }
         console.log('Message %s sent: %s', info.messageId, info.response);
     });
-}
+});
 
 app.listen(port);
