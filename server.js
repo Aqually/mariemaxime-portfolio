@@ -5,17 +5,23 @@ const app = express();
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser')
 
+
+// parse application/json
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
+// parse application/x-www-form-urlencoded
+let urlencodedParser = bodyParser.urlencoded({ extended: false })
+
 app.use(express.static(__dirname + "/public"));
 app.use(express.static(__dirname + "/dist"));
 app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname + "/dist", "index.html"));
 })
 
-// parse application/x-www-form-urlencoded
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 // create reusable transporter object using the default SMTP transport
-var transporter = nodemailer.createTransport({
+let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: 'mariemaximeblog@gmail.com',
@@ -27,9 +33,9 @@ function mailOptions(nom, email, message){
     let msg = {
         from: nom + '<' + email + '>', // sender address
         to: 'mariemaximetanguay@gmail.com', // list of receivers
-        subject: nom + ' a envoyé un message via MarieMaxime.me ✔', // Subject line
+        subject: nom + 'a envoyé un message de MarieMaxime.me ✔', // Subject line
         text: message, // plain text body
-        html: '<p>' + message + '</p> <p>email: ' + email + '</p>' // html body
+        html: '<p>' + message + '</p> <p>email: ' + email + ' </p> <p>nom: ' + nom + ' </p>' // html body
     }
     return msg;
 };
