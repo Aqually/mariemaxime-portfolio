@@ -15,8 +15,8 @@ app.get("/", (req, res) => {
 var smtpTransport = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'gmail.user@gmail.com',
-        pass: 'yourpass'
+        user: 'mariemaximeblog@gmail.com',
+        pass: '@@allo123'
     }
 });
 
@@ -29,7 +29,7 @@ app.post('/contact', function(req, res) {
         from: "Sender Name <sender@gmail.com>",
         to: "Receiver Name <reciver@gmail.com>",
         subject: "Confirmation Mail",
-        text: "Messege From ";
+        text: "Messege From "
     }, function(error, response) { //callback
         if (error) {
             console.log(error);
