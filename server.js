@@ -37,7 +37,7 @@ let mailOptions = {
 };
 
 app.post('/contact', urlencodedParser, function(req, res) {
-    console.log(req.body);
+    console.log(req.body.nom);
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             return console.log(error);
