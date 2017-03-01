@@ -20,7 +20,6 @@ var smtpTransport = nodemailer.createTransport({
     }
 });
 
-
 app.post('/contact', function(req, res) {
 
     console.log(req.body);
@@ -30,7 +29,7 @@ app.post('/contact', function(req, res) {
         from: "Sender Name <sender@gmail.com>",
         to: "Receiver Name <reciver@gmail.com>",
         subject: "Confirmation Mail",
-        text: "Messege From " + data.name
+        text: "Messege From " + data.nom
     }, function(error, response) { //callback
         if (error) {
             console.log(error);
