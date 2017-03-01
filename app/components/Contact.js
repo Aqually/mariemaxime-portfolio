@@ -20,7 +20,7 @@ export default class Contact extends Component {
                 message: self.refs.message.value
             }
         }).then(function(response) {
-            return response.json()
+            console.log(response);
         }).then(function(body) {
             console.log(body);
         });
