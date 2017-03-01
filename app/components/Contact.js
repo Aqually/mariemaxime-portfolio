@@ -1,8 +1,10 @@
 // classe
 
 import React, {Component} from "react";
+import {connect} from "react-redux";
+import {sendEmail} from "../actions";
 
-export default class Contact extends Component {
+class Contact extends Component {
     constructor() {
         super();
         this.onSubmit = this.handleSubmit.bind(this);
@@ -10,8 +12,22 @@ export default class Contact extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        const lesDonnees = {
+            nom: self.refs.nom.value,
+            email: self.refs.email.value,
+            message: self.refs.message.value
+        }
+
+        this.props.sendEmail(lesDonnees)
+            .then(
+                console.log("test");
+            )
+
+        /*
+        e.preventDefault();
         var self = this;
         console.log(this.refs.nom.value);
+
         fetch('./contact', {
             method: 'POST',
             headers: {
@@ -26,8 +42,11 @@ export default class Contact extends Component {
         }).then(function(response) {
             if(response.status === 200){
                 console.log("message envoyé! yay!")
+            }else{
+                console.warn("erreur!")
             }
         });
+        */
     }
 
     render() {
@@ -46,3 +65,9 @@ export default class Contact extends Component {
         )
     }
 }
+
+function mapStateToProps(state){
+    return {email: state.email}
+}
+
+export default connect(mapStateToProps,{sendEmail})(Contact);
