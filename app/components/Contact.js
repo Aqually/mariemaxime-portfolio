@@ -15,9 +15,9 @@ export default class Contact extends Component {
         fetch('./contact', {
             method: 'POST',
             data: {
-                nom: self.refs.nom,
-                email: self.refs.email,
-                message: self.refs.message
+                nom: self.refs.nom.value,
+                email: self.refs.email.value,
+                message: self.refs.message.value
             }
         }).then(function(response) {
             return response.json()
