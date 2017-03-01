@@ -5,19 +5,14 @@ const app = express();
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser')
 
-
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
-// parse application/json
-app.use(bodyParser.json())
-
 app.use(express.static(__dirname + "/public"));
 app.use(express.static(__dirname + "/dist"));
 app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname + "/dist", "index.html"));
 })
 
+// parse application/x-www-form-urlencoded
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 // create reusable transporter object using the default SMTP transport
 var transporter = nodemailer.createTransport({
@@ -34,7 +29,7 @@ function mailOptions(nom, email, message){
         to: 'mariemaximetanguay@gmail.com', // list of receivers
         subject: nom + ' a envoyé un message via MarieMaxime.me ✔', // Subject line
         text: message, // plain text body
-        html: '<p>'+message+'</p>' // html body
+        html: '<p>' + message + '</p> <p>email: ' + email + '</p>' // html body
     }
     return msg;
 };
