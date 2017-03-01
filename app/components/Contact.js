@@ -32,7 +32,7 @@ export default class Contact extends Component {
                     msgEnvoye: true
                 }
             }
-
+        }
     }
 
     render() {
