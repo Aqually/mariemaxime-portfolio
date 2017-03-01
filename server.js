@@ -21,9 +21,9 @@ var transporter = nodemailer.createTransport({
 });
 
 let mailOptions = {
-    from: '"Fred Foo 👻" <mariemaximetanguay@gmail.com>', // sender address
+    from: '"Marie-Maxime Tanguay 👻" <mariemaximetanguay@gmail.com>', // sender address
     to: 'mariemaximetanguay@gmail.com', // list of receivers
-    subject: 'Hello ✔', // Subject line
+    subject: 'Message reçue ✔', // Subject line
     text: 'Hello world ?', // plain text body
     html: '<b>Hello world ?</b>' // html body
 };

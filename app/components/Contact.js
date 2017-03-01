@@ -11,6 +11,7 @@ export default class Contact extends Component {
     handleSubmit(e) {
         e.preventDefault();
         var self = this;
+        console.log(this);
         fetch('./contact', {
             method: 'POST',
             data: {
