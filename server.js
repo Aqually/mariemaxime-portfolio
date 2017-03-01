@@ -44,6 +44,7 @@ app.post('/contact', urlencodedParser, function(req, res) {
         }
         console.log('Message %s sent: %s', info.messageId, info.response);
     });
+    res.end("fin");
 });
 
 app.listen(port);

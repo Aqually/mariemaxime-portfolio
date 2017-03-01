@@ -14,11 +14,15 @@ export default class Contact extends Component {
         console.log(this.refs.nom.value);
         fetch('./contact', {
             method: 'POST',
-            data: {
+            headers: {
+                'Accept' : 'application/json',
+                'Content-Type' : 'application/json',
+            },
+            body: JSON.stringify({
                 nom: self.refs.nom.value,
                 email: self.refs.email.value,
                 message: self.refs.message.value
-            }
+            })
         }).then(function(response) {
             console.log(response);
         }).then(function(body) {
