@@ -1,0 +1,450 @@
+// par Marie-Maxime Tanguay
+
+// Alfa Slab One
+  @import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One);
+
+// Roboto
+  @import url(https://fonts.googleapis.com/css?family=Roboto);
+
+//MEDIA QUERY mixins
+  @mobile: ~"only screen and (max-width: 890px)";
+  @tablette: ~"only screen and (min-width: 890px) and (max-width: 949px)";
+  @portable: ~"only screen and (min-width: 950px) and (max-width: 1128px)";
+  @grandEcran: ~"only screen and (min-width: 1129px)";
+
+//couleurs
+  @couleurBordure: lighten(black, 40%);
+
+//Génération des animations avec préfixes
+  .animation(@proprietesAnimation) {
+    -webkit-animation: @proprietesAnimation;
+    -moz-animation: @proprietesAnimation;
+    animation: @proprietesAnimation;
+  }
+//Génération des règles @keyframes avec préfixes
+  .keyframes(@nomAnimation; @imagesCles) {
+    @-moz-keyframes @nomAnimation {
+      @imagesCles();
+    }
+    @-webkit-keyframes @nomAnimation {
+      @imagesCles();
+    }
+    @keyframes @nomAnimation {
+      @imagesCles();
+    }
+  }
+//Génération des transform avec préfixes
+  .transform(@transformations) {
+    -moz-transform: (@transformations);
+    -ms-transform: (@transformations);
+    -webkit-transform: (@transformations);
+    -o-transform: (@transformations);
+    transform: (@transformations);
+  }
+
+//Les Animations
+  //Animation du titre (h1)
+    .keyframes (animeTitre{ 0%{ margin-top: -2em; opacity: 0.3;} });
+
+  //Animation de l'opacité pour l'intro
+    .keyframes (animeOpacite{ 0%{ opacity: 0; } 100%{ opacity: 1; } });
+
+  //Escargo spritesheet
+    .keyframes (animeEscargo{ 100%{background-position: -5850px;} });
+
+  //Déplacement de l'escargo
+    .keyframes(animeBougeEscargo{ 0%{.transform(translateX(-70vw)); } 100%{ .transform(translateX(70vw)); } });
+
+
+// Règle CSS pour contenu texte du site.
+
+body {
+  text-align: center;
+  font-family: Roboto;
+  width: 100%;
+}
+
+//le conteneur global du jeu
+#scene {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-image: url(../img/bg.png);
+  border: 0.3em solid darkgray;
+  box-sizing: border-box;
+  margin: 0 auto;
+  @media @grandEcran {
+    height: 100vh;
+  }
+  @media @portable {
+    height: 100vh;
+  }
+  @media @tablette {
+    height: 800px;
+  }
+  @media @mobile {
+    height: auto;
+  }
+
+  //Règle CSS pour l'intro du jeu
+  #intro {
+    position: relative;
+    margin: 10px auto;
+    width: 40em;
+    @media @grandEcran {
+      width: 40em;
+    }
+    @media @portable {
+      width: 90%;
+    }
+    @media @tablette {
+      width: 90%;
+    }
+    @media @mobile {
+      width: 90%;
+    }
+    //L'escargo animé
+    #escargo {
+      top: 700px;
+      left: 250px;
+      opacity: 0;
+      //position: absolute;
+      height: 120px;
+      width: 585px;
+      background-image: url(../img/escargo_sprite.png);
+      .animation(animeOpacite 10s forwards ~"," animeBougeEscargo 50s linear infinite ~"," animeEscargo 1.5s steps(30) alternate infinite);
+    }
+    h1 {
+      padding-bottom: 10px;
+      font-family: Alfa Slab One;
+      letter-spacing: 0.1em;
+      .animation(animeTitre 2s forwards);
+      font-weight: bold;
+      @media @grandEcran {
+        font-size: 3em;
+      }
+      @media @portable {
+        font-size: 2.5em;
+      }
+      @media @tablette {
+        font-size: 2em;
+      }
+      @media @mobile {
+        font-size: 2em;
+      }
+    }
+    h2 {
+      padding-top: 5px;
+      font-weight: bold;
+      font-size: 2em;
+    }
+    h3 {
+      padding-top: 40px;
+      opacity: 0;
+      .animation(animeOpacite 2s 2s forwards);
+    }
+    p {
+      text-align: left;
+      font-size: 1.3em;
+      line-height: 1.5;
+      @media @mobile {
+        font-size: 1.2em;
+      }
+    }
+    h2,
+    p {
+      opacity: 0;
+      .animation(animeOpacite 5s 1s forwards);
+    }
+    button {
+      opacity: 0;
+      cursor: pointer;
+      color: #ffffff;
+      font-size: 25px;
+      font-weight: bold;
+      padding: 15px 50px;
+      .animation(animeOpacite 1s linear 1s forwards);
+    }
+  }
+  //Règle CSS pour la partie principal du jeu
+  #leJeu {
+    margin-top: 8em;
+    display: none;
+    width: auto;
+    height: auto;
+    //Le pouvoir du display:flex!
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    @media @mobile {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 0;
+    }
+    #partieGagne {
+      display: none;
+      position: absolute;
+      margin: 0 auto;
+      width: 25em;
+      top: 30%;
+      left: 0;
+      right:0;
+      background-color: lightgray;
+      padding: 50px;
+      border: 3px solid darkgray;
+      z-index: 999;
+    }
+
+    //Zone des lettres au départ
+    #colisDepart {
+      background-color: lightgreen;
+      position: relative;
+      border: 3px solid @couleurBordure;
+      margin-right: 2em;
+      max-width: 36em;
+      @media @grandEcran {
+        width: 30em;
+        height: 30em;
+      }
+      @media @portable {
+        width: 20em;
+        height: 25em;
+      }
+      @media @tablette {
+        width: 20em;
+        height: 25em;
+      }
+      @media @mobile {
+        margin-bottom: 0.5em;
+        width: 100%;
+        margin-right: 0;
+        height: 18em;
+      }
+      h2 {
+        @media @grandEcran {
+          margin-bottom: 5em;
+        }
+        @media @portable {
+          margin-bottom: 0.5em;
+        }
+        @media @tablette {
+          margin-bottom: 0.5em;
+        }
+        @media @mobile {
+          margin-bottom: 1.5em;
+        }
+      }
+      //Les lettres sont instanciées ici
+      #zoneLettre {
+        margin: 0 auto;
+        width: 18em;
+        height: 16em;
+        position: relative;
+        @media @grandEcran {
+          width: 18em;
+          height: 16em;
+        }
+        @media @portable {
+          width: 12em;
+          height: 10em;
+          margin-top: 5em;
+        }
+        @media @tablette {
+          width: 12em;
+          height: 8em;
+          margin-top: 5em;
+        }
+        @media @mobile {
+          width: 12em;
+          height: 8em;
+          margin-top:0em;
+        }
+      }
+    }
+    //Élément qui contient les zones de dépot des lettres
+    #colisDepot {
+      background-color: lightblue;
+      max-width: 36em;
+      width: auto;
+      height: auto;
+      border: 4px solid @couleurBordure;
+      //Le pouvoir du display:flex!
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      flex-wrap: wrap;
+      @media @grandEcran {
+        height: auto;
+      }
+      @media @portable {
+        height: auto;
+      }
+      @media @tablette {
+        height: auto;
+      }
+      @media @mobile {
+        width: 100%;
+      }
+      h2 {
+        position: relative;
+        @media @grandEcran {
+          margin-top: 2em;
+          margin-bottom: 3em;
+        }
+        @media @portable {
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+        }
+        @media @tablette {
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+        }
+        @media @mobile {
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+        }
+      }
+      #zoneDepot {
+        //Le pouvoir du flexbox!!
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        @media @mobile {
+        }
+        //Où on peut déposer les lettres
+        .depot {
+          margin-bottom: 0.5em;
+          border: 3px solid @couleurBordure;
+          width: 170px;
+          height: 120px;
+          position: relative;
+          @media @mobile {
+            margin-bottom: 0.1em;
+          }
+        }
+      }
+    }
+  }
+  //Info quand la partie termine
+  #finPartie {
+    margin: 10em auto;
+    display: none;
+    width: 30em;
+    background-color: lightgray;
+    padding: 25px 50px;
+    border: 3px solid darkgray;
+    z-index: 999;
+
+  }
+}
+//L'éléments glissables
+.lettre {
+  background: url(../img/bg_lettre.png);
+  border: 2px solid black;
+  box-sizing: border-box;
+  border-radius: 0.2em;
+  position: absolute;
+  z-index: 0;
+  width: 150px;
+  height: 100px;
+}
+//Quand on survol le depot avec une lettre
+.survolDepot {
+  background-color: green;
+}
+
+//divers boutons
+button {
+  background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+  border-radius: 6px;
+  border: 1px solid #057fd0;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 1em;
+  padding: 10px 25px;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 #5b6178;
+  margin-bottom: 0.5em;
+}
+button:hover {
+  background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+}
+button:active {
+  position: relative;
+  top: 1px;
+}
+
+
+//Règle css du footer
+footer {
+  text-align: center;
+  color:black;
+  font-size: 1.1em;
+}
+footer .auteure {
+  color: #937ca3;
+}
+
+
+//Affiche le score et le temps
+#infoPartie {
+  position: absolute;
+  display: float;
+  top: 0;
+
+  @media @grandEcran{
+    text-align: left;
+    position: absolute;
+    display: inline-block;
+  }
+
+  @media @portable{
+    text-align: left;
+    position: absolute;
+    display: inline-block;
+  }
+
+  @media @tablette{
+    text-align: left;
+    position: absolute;
+    display: inline-block;
+  }
+
+  @media @mobile{
+    position: static;
+    text-align: center;
+  }
+  div{
+    float: left;
+  }
+  #lesScores{
+    margin-top: 0.5em;
+    color: lighten(black, 15%);
+  }
+
+  //Affiche le temps restant
+  #temps {
+    color: darken(blue, 20%);
+    @media @grandEcran{
+      margin-bottom: 5em;
+      margin-left: 4em;
+      margin-right: 2em;
+    }
+    @media @portable{
+      margin-bottom: 5em;
+      margin-left: 4em;
+      margin-right: 2em;
+    }
+    @media @tablette{
+      margin-bottom: 5em;
+      margin-left: 4em;
+      margin-right: 2em;
+    }
+  }
+
+}

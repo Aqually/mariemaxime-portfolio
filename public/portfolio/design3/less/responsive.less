@@ -1,0 +1,183 @@
+@tablette: ~"only screen and (min-width: 850px) and (max-width: 980px)";
+@mobile: ~"only screen and (max-width: 850px)";
+@petitMobile: ~"only screen and (max-width: 552px)";
+body {
+  @media @tablette,
+  @mobile {
+    background: none;
+  }
+}
+main,
+header nav,
+main #nouveauBoutique,
+ {
+  @media @tablette,
+  @mobile {
+    width: 100%;
+  }
+}
+main #diaporama p {
+  @media @mobile {
+    text-align: center;
+    display: block;
+    height: auto;
+    float: none;
+    line-height: normal;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    padding-left: 0;
+  }
+}
+main #diaporama p a {
+  @media @mobile {
+    text-align: center;
+    float: none;
+    width: 10em;
+    margin: 0 auto;
+  }
+}
+header nav ul li a {
+  @media @tablette {
+    font-size: 1.05em;
+    padding: 3.60em 0.32em 0.2em;
+  }
+  @media @mobile {
+    text-align: center;
+    margin-right: 0;
+    padding: 1.6em 0.3em;
+  }
+  @media @petitMobile {
+    padding: 1em 0.3em;
+  }
+}
+header nav ul {
+  @media @mobile {
+    margin-right: 0;
+    text-align: center;
+  }
+  @media @petitMobile {
+    display: none;
+  }
+}
+header nav .petitMobile
+ {
+  @media @petitMobile {
+    display: block;
+    position: relative;
+    z-index: 99;
+    font-size: 1.1em;
+  }
+}
+section .petitMobile{
+  @media @mobile{
+    display: block;
+    position: relative;
+  }
+}
+
+main section .grandEcran{
+  @media @mobile{
+    display: none;
+  }
+}
+
+section .petitMobile{
+  z-index: 1000;
+  color: white;
+  padding: 0;
+  list-style: none;
+  margin: 0 auto;
+  background: black;
+  text-align: center;
+  width: 15em;
+  font-family: akkuratbold;
+  background-color: #292929;
+  height: 2em;
+  line-height: 2em;
+  border: 1px solid black;
+  font-size: 1.1em;
+  background-image: url(../images/fleche.png);
+  background-repeat: no-repeat;
+  background-position: 93% 50%;
+  a{
+    color: white;
+    display: block;
+  }
+  a:hover {
+    color: #e98111;
+    background-color: #3f3f3f;
+  }
+}
+
+header nav ul li {
+  @media @petitMobile {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}
+header img {
+  @media @mobile {
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 4.5em;
+  }
+}
+#header_apropos p,
+#header_achatEnLigne p {
+  @media @mobile {
+    height: auto;
+    text-align: center;
+    line-height: 1.5em;
+    padding-left: 0;
+  }
+}
+main section .imgConteneur .col2 {
+  @media @tablette,
+  @mobile {
+    max-width: 95%;
+    max-height: 100%;
+    min-height: 242px;
+    height: 100%;
+  }
+}
+
+main section .menuFiltre{
+  @media @mobile{
+    width: 75%;
+  }
+}
+main section .imgConteneur .filtre{
+  @media @mobile{
+    min-width: 200px;
+    max-width: 300px;
+    position: relative;
+  }
+}
+main section .imgConteneur .filtre:first-child{
+  @media @mobile{
+    z-index: 999;
+  }
+}
+main section .imgConteneur .filtre:nth-child(2){
+  @media @mobile{
+    z-index: 888;
+  }
+}
+input {
+  @media @mobile {
+    width: 75%;
+    padding-left: 0;
+  }
+}
+
+main #presentation p{
+  @media @petitMobile {
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+    word-spacing: normal;
+    letter-spacing: normal;
+    font-size: 1.2em;
+  }
+}

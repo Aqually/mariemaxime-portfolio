@@ -1,0 +1,71 @@
+	/* Version adapté pour mobile! */
+
+
+
+	/* ---- NAV ----- */
+	
+	nav {
+		border-radius: 0px;
+	}
+	nav ul li { 
+		width: 100%;
+	}
+
+	
+	/* ---- SECTIONS ----- */
+	#main {
+		padding-top: 3em;
+	}
+
+	section h2, h3{
+		margin-left: 1em;
+	}
+	section h2{
+		font-size: 4em;
+	}
+	section #gameCover{
+		display: block;
+		margin: 25px auto;
+	}
+	
+	section p, section ul li, figure { 
+		margin: 1em;
+		word-spacing: -1px;
+		letter-spacing: 0.04em;
+		font-size: 2.5em;
+	}
+	section ul li {
+		margin-left: 2em;
+		text-align: left;
+	}
+
+	section figure{
+		border: 0px;
+	}
+
+	section figure img {
+		width: 75%;
+		border: 1px solid white;
+	}
+
+	section figure figcaption{
+		background-color: transparent;
+	}
+
+
+	/* ---- FOOTER ----- */
+	
+	footer  #jourTerre1 {
+		display: none;
+	}
+	footer #jourTerre2 {
+		display: block;
+	}
+
+
+	/* ---- AUTRES ----- */
+	
+	.flex-center {
+  		display: block;
+	}
+}

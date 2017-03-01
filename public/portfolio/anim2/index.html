@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+	<title>Escargo Express</title>
+	<link type="text/css" rel="stylesheet" href="css/normalize.css" />
+	<link type="text/css" rel="stylesheet" href="css/styles.css" />
+	<meta charset="utf-8" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="author" content="Marie-Maxime Tanguay" />
+	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+</head>
+
+<body>
+
+	<section id="scene">
+
+		<div id="intro">
+			<h1>Escargo Express</h1>
+			<h2>Introduction</h2>
+			<p>Bienvenue chez Escargo Express! Votre tâche est simple; classer les colis arrivant selon leur type de timbre. Prenez garde, car votre temps est compté! </p>
+			<h2>Contrôle</h2>
+			<p>Prenez les colis en cliquant sur ceux-ci avec le bouton gauche de la souris. Tenez le bouton enfoncé et déplacez-les dans la case correspondante. Changer l'angle du colis avec les flèches de gauche et de droite.
+			</p>
+			<div id="escargo">
+
+			</div>
+			<div class="button">
+				<button type="button" name="jouer" id="debutPartie">Jouer!</button>
+			</div>
+			<h3>Votre meilleur score est de:
+				<span class="meilleurScore"></span>
+			</h3>
+		</div>
+
+		<div id="finPartie">
+			<h2>Partie terminée!</h2>
+			<h2>Votre score était de:
+				<span class="score"></span>
+			</h2>
+			<h2>Votre meilleur score est de:
+				<span class="meilleurScore"></span>
+			</h2>
+			<div class="button">
+				<button type="button" name="nouvellePartie" id="nouvellePartie">Jouer une nouvelle partie!</button>
+			</div>
+		</div>
+
+		<div id="leJeu">
+
+			<div id="infoPartie">
+				<div id="temps">
+					<h2>Temps:
+						<span class="leTemps"></span>
+					</h2>
+					<h3>Niveau:
+						<span class="niveau"></span>
+					</h3>
+				</div>
+				<div id="lesScores">
+					<h3>Score actuel:
+						<span class="score"></span>
+					</h3>
+					<h4>Votre meilleur score:
+						<span class="meilleurScore"></span>
+					</h4>
+				</div>
+
+				<div>
+
+				</div>
+			</div>
+
+			<div id="partieGagne">
+				<h2>Bravo! Votre score actuel:
+					<span class="score"></span>
+				</h2>
+				<div class="button">
+					<button type="button" name="rejouer" id="rejouerPartie">Allez au niveau
+						<span class="niveau"></span>
+					</button>
+				</div>
+				<div class="button">
+					<button type="button" name="quitter" id="quitterPartie">Quitter et Sauvegarder la partie</button>
+				</div>
+			</div>
+
+			<div id="colisDepart">
+				<h2>Zone d'arrivée des lettres</h2>
+				<div id="zoneLettre">
+				</div>
+			</div>
+			<div id="colisDepot">
+				<h2>Zone de dépôt</h2>
+				<div id="zoneDepot">
+					<div class="depot" data-timbre="1"></div>
+					<div class="depot" data-timbre="2"></div>
+					<div class="depot" data-timbre="3"></div>
+					<div class="depot" data-timbre="4"></div>
+					<div class="depot" data-timbre="5"></div>
+					<div class="depot" data-timbre="6"></div>
+					<div class="depot" data-timbre="7"></div>
+					<div class="depot" data-timbre="8"></div>
+					<div class="depot" data-timbre="9"></div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+	<footer>
+		<p>
+			Animation créée par
+			<span class="auteure">Marie-Maxime Tanguay</span>. Automne 2015.
+		</p>
+		<p>Images de fonds d'écran: <a href="http://subtlepatterns.com/halftone/">Halftone</a> et <a href="http://subtlepatterns.com/swirl-2/">Swirl</a>.</p>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script type="text/javascript" src='scripts/jquery.transit.min.js'></script>
+	<script type="text/javascript" src='scripts/touches.js'></script>
+	<script type="text/javascript" src='scripts/lettre.js'></script>
+	<script type="text/javascript" src='scripts/controleur.js'></script>
+	<script type="text/javascript" src='scripts/application.js'></script>
+
+	</script>
+</body>
+
+</html>

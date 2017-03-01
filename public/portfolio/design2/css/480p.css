@@ -1,0 +1,64 @@
+/* Version adapté pour petite écran et mobile */
+
+/* ---- NAV ----- */
+
+nav {
+	border-radius: 0px;
+}
+nav ul li { 
+	width: 100%;
+}
+
+/* ---- SECTIONS ----- */
+#main {
+	padding-top: 3em;
+}
+
+section h2{
+	margin-left: 0.5em;
+	font-size: 2em;
+}
+section h3{
+	margin-left: 1em;
+	font-size: 1.3em;
+}
+section #gameCover{
+	display: block;
+	margin: 25px auto;
+}
+
+section p {
+	text-align: left;
+	font-size: 1em;
+
+}
+
+section p, section ul li, figure { 
+	margin: 1em;
+	word-spacing: 1px;
+	letter-spacing: 0.1em;
+	font-size: 1em;
+}
+section ul li {
+	margin-left: 2em;
+	text-align: left;
+}
+
+section figure{
+	border: 0px;
+}
+
+section figure img {
+	width: 75%;
+	border: 1px solid white;
+}
+
+section figure figcaption{
+	background-color: transparent;
+}
+
+/* ---- AUTRES ----- */
+
+.flex-center {
+		display: block;
+}

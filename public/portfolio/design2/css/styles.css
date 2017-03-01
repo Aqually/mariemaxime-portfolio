@@ -1,0 +1,269 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:700);
+
+html, body {
+    height:100%;
+}
+
+body {
+	color: #FFF;
+	background-color: black;
+	background-image: url('../img/bg.jpg');
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#wrapper {
+	max-width: 1050px;
+	margin: 2em auto;
+	height: 100%;
+}
+
+
+/* ----- Le header --------- */
+
+header {
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+	header h1{
+		font-size: 4em;
+		text-align: center;
+		display: none;
+	}
+
+	header img{
+		width: 80%;
+	}
+
+
+/* ------ La navigation ------- */
+
+nav {
+	background-color: white;
+
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	margin: 0 auto;
+	overflow: hidden;
+
+}
+	nav ul {
+		max-width: inherit;
+		background-color: #FFF
+	}
+	
+	nav ul li{
+		display: inline-block;
+		text-align: center;
+		height: 4em;
+		line-height: 4em;
+		float: left;
+		min-width: 33.333333%;
+	}
+		@media only screen and (max-width: 860px) {
+			nav ul li{
+				width: 100%;
+			}	
+		}
+
+	nav ul li a{
+		text-decoration: none;
+		color: black;
+		display: block;
+		height: inherit;
+		background-color: white;
+		font-size: 1.8em;
+		font-family: 'Ubuntu', sans-serif;
+		letter-spacing: 0.15em;
+	}
+
+	nav ul li a:hover{
+		color: white;
+		background-color: black;
+	}
+
+
+/* ----- Contenu du site ----- */
+
+#main {
+	background: rgba(0, 0, 0, 0.8);
+	max-width: inherit;
+	margin: 0 auto;
+	padding-top: 6em;
+
+}
+
+section {
+	max-width: 850px;
+	min-width: 80%;
+	margin: 0 auto;
+	margin-bottom: 6em;
+	padding-left: 1em;
+	padding-right: 1em;
+
+
+}
+		@media only screen and (max-width: 860px) {
+			nav ul li{
+				width: 100%;
+			}	
+		}
+	section h2 {
+		color: orange;
+		font-size: 2.3em;
+		font-family: 'Roboto', sans-serif;
+		letter-spacing: 0.1em;
+		font-weight: 900;
+		margin-bottom: 1em;
+	  	text-shadow:
+	    -1px -1px 0 #191000,  
+	     1px -1px 0 #191000,
+	    -1px 1px 0 #191000,
+	     1px 1px 0 #191000;
+	}
+
+	section h3, h4 {
+		color: orange;
+		font-size: 1.3em;
+		font-family: 'Roboto', sans-serif;
+		letter-spacing: 0.1em;
+		font-weight: bold;
+		margin-bottom: 1em;
+		margin-top: 1.5em;
+	}
+	section h4{
+		margin-top: 3em;
+		text-align: center;
+	}
+
+	section #gameCover{
+		margin: 25px auto;
+		text-align: center;
+		width: 75%;
+		display: block;
+		border: 2px solid white;
+	}
+
+	section p {
+		font-size: 1.3129em;
+		margin-top: 1em;
+		text-align:justify;
+		font-family: 'Open Sans', sans-serif;
+		word-spacing: 0px;
+		letter-spacing: 0.05em;
+		line-height: 1.80em;
+	}
+
+	section ul li {
+		font-size: 1.3129em;
+		margin-top: 1em;
+		margin-left: 1em;
+		text-align: left;
+		font-family: 'Open Sans', sans-serif;
+		word-spacing: 0.1em;
+		letter-spacing: 0.09em;
+		line-height: 1.3em;
+	}
+
+	section figure {
+		border: 1px solid gray;
+		margin-top: 100px;
+		text-align: center;
+	}
+
+	section #imgPollu{
+		background-color: rgba(89, 46, 15, 0.3);
+	}
+
+	section #imgEco{
+		background-color: rgba(0, 26, 0, 0.3);
+	}
+
+	section figure img {
+		border: 1px solid black;
+		width: 99.5%;
+	}
+
+	figcaption{
+		margin-top: -4px;
+		padding: 10px;
+		text-align: center;
+		background-color: #000;
+		font-family: 'Open Sans';
+		font-size: 0.8em;
+		font-style: italic;
+	}
+
+	section #leaders {
+		margin-top: 50px;
+	}
+
+#goTop {
+	margin-top: -50px;
+}
+
+#goTop p{
+	text-align: center;
+	font-size: 1.0em;
+	color: white;
+	font-family: 'Ubuntu';
+}
+
+#goTop p a {
+	text-decoration: none;
+	color: white;
+}
+
+#dispo div{
+	text-align: center;
+}
+
+#dispo div img{
+	width: 100%;
+	max-width: 137px;
+	text-align: center;
+}
+
+footer {
+	margin-top: -50px;
+	text-align: center;
+	font-size: 0.95em;
+	font-family: 'Open Sans', sans-serif;
+	padding-bottom: 50px;
+}
+
+footer a img{
+	margin-bottom: 40px;
+}
+
+footer p {
+	margin-bottom: 10px;
+}
+
+footer #jourTerre2 {
+	display: none;
+}
+
+		@media only screen and (max-width: 760px) {
+			footer #jourTerre2 {
+				display: block;
+			}
+			footer  #jourTerre1 {
+				display: none;
+			}
+		}
+
+
+/* ---- Clases divers ------- */
+
+.float {
+	float: left;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}

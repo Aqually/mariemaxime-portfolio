@@ -1,0 +1,553 @@
+@import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@-moz-keyframes animeTitre {
+  0% {
+    margin-top: -2em;
+    opacity: 0.3;
+  }
+}
+@-webkit-keyframes animeTitre {
+  0% {
+    margin-top: -2em;
+    opacity: 0.3;
+  }
+}
+@keyframes animeTitre {
+  0% {
+    margin-top: -2em;
+    opacity: 0.3;
+  }
+}
+@-moz-keyframes animeOpacite {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes animeOpacite {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animeOpacite {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes animeEscargo {
+  100% {
+    background-position: -5850px;
+  }
+}
+@-webkit-keyframes animeEscargo {
+  100% {
+    background-position: -5850px;
+  }
+}
+@keyframes animeEscargo {
+  100% {
+    background-position: -5850px;
+  }
+}
+@-moz-keyframes animeBougeEscargo {
+  0% {
+    -moz-transform: translateX(-70vw);
+    -ms-transform: translateX(-70vw);
+    -webkit-transform: translateX(-70vw);
+    -o-transform: translateX(-70vw);
+    transform: translateX(-70vw);
+  }
+  100% {
+    -moz-transform: translateX(70vw);
+    -ms-transform: translateX(70vw);
+    -webkit-transform: translateX(70vw);
+    -o-transform: translateX(70vw);
+    transform: translateX(70vw);
+  }
+}
+@-webkit-keyframes animeBougeEscargo {
+  0% {
+    -moz-transform: translateX(-70vw);
+    -ms-transform: translateX(-70vw);
+    -webkit-transform: translateX(-70vw);
+    -o-transform: translateX(-70vw);
+    transform: translateX(-70vw);
+  }
+  100% {
+    -moz-transform: translateX(70vw);
+    -ms-transform: translateX(70vw);
+    -webkit-transform: translateX(70vw);
+    -o-transform: translateX(70vw);
+    transform: translateX(70vw);
+  }
+}
+@keyframes animeBougeEscargo {
+  0% {
+    -moz-transform: translateX(-70vw);
+    -ms-transform: translateX(-70vw);
+    -webkit-transform: translateX(-70vw);
+    -o-transform: translateX(-70vw);
+    transform: translateX(-70vw);
+  }
+  100% {
+    -moz-transform: translateX(70vw);
+    -ms-transform: translateX(70vw);
+    -webkit-transform: translateX(70vw);
+    -o-transform: translateX(70vw);
+    transform: translateX(70vw);
+  }
+}
+body {
+  text-align: center;
+  font-family: Roboto;
+  width: 100%;
+}
+#scene {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-image: url(../img/bg.png);
+  border: 0.3em solid darkgray;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1129px) {
+  #scene {
+    height: 100vh;
+  }
+}
+@media only screen and (min-width: 950px) and (max-width: 1128px) {
+  #scene {
+    height: 100vh;
+  }
+}
+@media only screen and (min-width: 890px) and (max-width: 949px) {
+  #scene {
+    height: 800px;
+  }
+}
+@media only screen and (max-width: 890px) {
+  #scene {
+    height: auto;
+  }
+}
+#scene #intro {
+  position: relative;
+  margin: 10px auto;
+  width: 40em;
+}
+@media only screen and (min-width: 1129px) {
+  #scene #intro {
+    width: 40em;
+  }
+}
+@media only screen and (min-width: 950px) and (max-width: 1128px) {
+  #scene #intro {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 890px) and (max-width: 949px) {
+  #scene #intro {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 890px) {
+  #scene #intro {
+    width: 90%;
+  }
+}
+#scene #intro #escargo {
+  top: 700px;
+  left: 250px;
+  opacity: 0;
+  height: 120px;
+  width: 585px;
+  background-image: url(../img/escargo_sprite.png);
+  -webkit-animation: animeOpacite 10s forwards , animeBougeEscargo 50s linear infinite , animeEscargo 1.5s steps(30) alternate infinite;
+  -moz-animation: animeOpacite 10s forwards , animeBougeEscargo 50s linear infinite , animeEscargo 1.5s steps(30) alternate infinite;
+  animation: animeOpacite 10s forwards , animeBougeEscargo 50s linear infinite , animeEscargo 1.5s steps(30) alternate infinite;
+}
+#scene #intro h1 {
+  padding-bottom: 10px;
+  font-family: Alfa Slab One;
+  letter-spacing: 0.1em;
+  -webkit-animation: animeTitre 2s forwards;
+  -moz-animation: animeTitre 2s forwards;
+  animation: animeTitre 2s forwards;
+  font-weight: bold;
+}
+@media only screen and (min-width: 1129px) {
+  #scene #intro h1 {
+    font-size: 3em;
+  }
+}
+@media only screen and (min-width: 950px) and (max-width: 1128px) {
+  #scene #intro h1 {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (min-width: 890px) and (max-width: 949px) {
+  #scene #intro h1 {
+    font-size: 2em;
+  }
+}
+@media only screen and (max-width: 890px) {
+  #scene #intro h1 {
+    font-size: 2em;
+  }
+}
+#scene #intro h2 {
+  padding-top: 5px;
+  font-weight: bold;
+  font-size: 2em;
+}
+#scene #intro h3 {
+  padding-top: 40px;
+  opacity: 0;
+  -webkit-animation: animeOpacite 2s 2s forwards;
+  -moz-animation: animeOpacite 2s 2s forwards;
+  animation: animeOpacite 2s 2s forwards;
+}
+#scene #intro p {
+  text-align: left;
+  font-size: 1.3em;
+  line-height: 1.5;
+}
+@media only screen and (max-width: 890px) {
+  #scene #intro p {
+    font-size: 1.2em;
+  }
+}
+#scene #intro h2,
+#scene #intro p {
+  opacity: 0;
+  -webkit-animation: animeOpacite 5s 1s forwards;
+  -moz-animation: animeOpacite 5s 1s forwards;
+  animation: animeOpacite 5s 1s forwards;
+}
+#scene #intro button {
+  opacity: 0;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 15px 50px;
+  -webkit-animation: animeOpacite 1s linear 1s forwards;
+  -moz-animation: animeOpacite 1s linear 1s forwards;
+  animation: animeOpacite 1s linear 1s forwards;
+}
+#scene #leJeu {
+  margin-top: 8em;
+  display: none;
+  width: auto;
+  height: auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media only screen and (max-width: 890px) {
+  #scene #leJeu {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0;
+  }
+}
+#scene #leJeu #partieGagne {
+  display: none;
+  position: absolute;
+  margin: 0 auto;
+  width: 25em;
+  top: 30%;
+  left: 0;
+  right: 0;
+  background-color: lightgray;
+  padding: 50px;
+  border: 3px solid darkgray;
+  z-index: 999;
+}
+#scene #leJeu #colisDepart {
+  background-color: lightgreen;
+  position: relative;
+  border: 3px solid #666666;
+  margin-right: 2em;
+  max-width: 36em;
+}
+@media only screen and (min-width: 1129px) {
+  #scene #leJeu #colisDepart {
+    width: 30em;
+    height: 30em;
+  }
+}
+@media only screen and (min-width: 950px) and (max-width: 1128px) {
+  #scene #leJeu #colisDepart {
+    width: 20em;
+    height: 25em;
+  }
+}
+@media only screen and (min-width: 890px) and (max-width: 949px) {
+  #scene #leJeu #colisDepart {
+    width: 20em;
+    height: 25em;
+  }
+}
+@media only screen and (max-width: 890px) {
+  #scene #leJeu #colisDepart {
+    margin-bottom: 0.5em;
+    width: 100%;
+    margin-right: 0;
+    height: 18em;
+  }
+}
+@media only screen and (min-width: 1129px) {
+  #scene #leJeu #colisDepart h2 {
+    margin-bottom: 5em;
+  }
+}
+@media only screen and (min-width: 950px) and (max-width: 1128px) {
+  #scene #leJeu #colisDepart h2 {
+    margin-bottom: 0.5em;
+  }
+}
+@media only screen and (min-width: 890px) and (max-width: 949px) {
+  #scene #leJeu #colisDepart h2 {
+    margin-bottom: 0.5em;
+  }
+}
+@media only screen and (max-width: 890px) {
+  #scene #leJeu #colisDepart h2 {
+    margin-bottom: 1.5em;
+  }
+}
+#scene #leJeu #colisDepart #zoneLettre {
+  margin: 0 auto;
+  width: 18em;
+  height: 16em;
+  position: relative;
+}
+@media only screen and (min-width: 1129px) {
+  #scene #leJeu #colisDepart #zoneLettre {
+    width: 18em;
+    height: 16em;
+  }
+}
+@media only screen and (min-width: 950px) and (max-width: 1128px) {
+  #scene #leJeu #colisDepart #zoneLettre {
+    width: 12em;
+    height: 10em;
+    margin-top: 5em;
+  }
+}
+@media only screen and (min-width: 890px) and (max-width: 949px) {
+  #scene #leJeu #colisDepart #zoneLettre {
+    width: 12em;
+    height: 8em;
+    margin-top: 5em;
+  }
+}
+@media only screen and (max-width: 890px) {
+  #scene #leJeu #colisDepart #zoneLettre {
+    width: 12em;
+    height: 8em;
+    margin-top: 0em;
+  }
+}
+#scene #leJeu #colisDepot {
+  background-color: lightblue;
+  max-width: 36em;
+  width: auto;
+  height: auto;
+  border: 4px solid #666666;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 1129px) {
+  #scene #leJeu #colisDepot {
+    height: auto;
+  }
+}
+@media only screen and (min-width: 950px) and (max-width: 1128px) {
+  #scene #leJeu #colisDepot {
+    height: auto;
+  }
+}
+@media only screen and (min-width: 890px) and (max-width: 949px) {
+  #scene #leJeu #colisDepot {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 890px) {
+  #scene #leJeu #colisDepot {
+    width: 100%;
+  }
+}
+#scene #leJeu #colisDepot h2 {
+  position: relative;
+}
+@media only screen and (min-width: 1129px) {
+  #scene #leJeu #colisDepot h2 {
+    margin-top: 2em;
+    margin-bottom: 3em;
+  }
+}
+@media only screen and (min-width: 950px) and (max-width: 1128px) {
+  #scene #leJeu #colisDepot h2 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+}
+@media only screen and (min-width: 890px) and (max-width: 949px) {
+  #scene #leJeu #colisDepot h2 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+}
+@media only screen and (max-width: 890px) {
+  #scene #leJeu #colisDepot h2 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+}
+#scene #leJeu #colisDepot #zoneDepot {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+#scene #leJeu #colisDepot #zoneDepot .depot {
+  margin-bottom: 0.5em;
+  border: 3px solid #666666;
+  width: 170px;
+  height: 120px;
+  position: relative;
+}
+@media only screen and (max-width: 890px) {
+  #scene #leJeu #colisDepot #zoneDepot .depot {
+    margin-bottom: 0.1em;
+  }
+}
+#scene #finPartie {
+  margin: 10em auto;
+  display: none;
+  width: 30em;
+  background-color: lightgray;
+  padding: 25px 50px;
+  border: 3px solid darkgray;
+  z-index: 999;
+}
+.lettre {
+  background: url(../img/bg_lettre.png);
+  border: 2px solid black;
+  box-sizing: border-box;
+  border-radius: 0.2em;
+  position: absolute;
+  z-index: 0;
+  width: 150px;
+  height: 100px;
+}
+.survolDepot {
+  background-color: green;
+}
+button {
+  background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+  border-radius: 6px;
+  border: 1px solid #057fd0;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 1em;
+  padding: 10px 25px;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 #5b6178;
+  margin-bottom: 0.5em;
+}
+button:hover {
+  background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+}
+button:active {
+  position: relative;
+  top: 1px;
+}
+footer {
+  text-align: center;
+  color: black;
+  font-size: 1.1em;
+}
+footer .auteure {
+  color: #937ca3;
+}
+#infoPartie {
+  position: absolute;
+  display: float;
+  top: 0;
+}
+@media only screen and (min-width: 1129px) {
+  #infoPartie {
+    text-align: left;
+    position: absolute;
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 950px) and (max-width: 1128px) {
+  #infoPartie {
+    text-align: left;
+    position: absolute;
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 890px) and (max-width: 949px) {
+  #infoPartie {
+    text-align: left;
+    position: absolute;
+    display: inline-block;
+  }
+}
+@media only screen and (max-width: 890px) {
+  #infoPartie {
+    position: static;
+    text-align: center;
+  }
+}
+#infoPartie div {
+  float: left;
+}
+#infoPartie #lesScores {
+  margin-top: 0.5em;
+  color: #262626;
+}
+#infoPartie #temps {
+  color: #000099;
+}
+@media only screen and (min-width: 1129px) {
+  #infoPartie #temps {
+    margin-bottom: 5em;
+    margin-left: 4em;
+    margin-right: 2em;
+  }
+}
+@media only screen and (min-width: 950px) and (max-width: 1128px) {
+  #infoPartie #temps {
+    margin-bottom: 5em;
+    margin-left: 4em;
+    margin-right: 2em;
+  }
+}
+@media only screen and (min-width: 890px) and (max-width: 949px) {
+  #infoPartie #temps {
+    margin-bottom: 5em;
+    margin-left: 4em;
+    margin-right: 2em;
+  }
+}
