@@ -25,6 +25,7 @@
   "dependencies": {
     "axios": "^0.15.3",
     "babel-loader": "^6.2.10",
+    "body-parser": "^1.16.1",
     "firebase": "^3.6.9",
     "html-webpack-plugin": "^2.26.0",
     "lodash": "^4.17.4",
