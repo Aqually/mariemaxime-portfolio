@@ -12,13 +12,14 @@ app.get("/", (req, res) => {
 
 
 // create reusable transporter object using the default SMTP transport
-var smtpTransport = nodemailer.createTransport("SMTP",{
-   service: "Gmail",  // sets automatically host, port and connection security settings
-   auth: {
-       user: "myemail@gmail.com",
-       pass: "mypass"
-   }
+var smtpTransport = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: 'gmail.user@gmail.com',
+        pass: 'yourpass'
+    }
 });
+
 
 app.post('/contact', function(req, res) {
 
