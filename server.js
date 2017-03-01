@@ -28,17 +28,17 @@ var transporter = nodemailer.createTransport({
     }
 });
 
-let mailOptions = {
-    from: '"Marie-Maxime Tanguay 👻" <mariemaximetanguay@gmail.com>', // sender address
+let mailOptions(nom, email, message) = {
+    from: nom + '<' + email + '>', // sender address
     to: 'mariemaximetanguay@gmail.com', // list of receivers
     subject: 'Message reçue ✔', // Subject line
-    text: 'Hello world ?', // plain text body
-    html: '<b>Hello world ?</b>' // html body
+    text: message, // plain text body
+    html: '<p>Hello world ?</p>' // html body
 };
 
 app.post('/contact', urlencodedParser, function(req, res) {
     console.log(req.body.nom);
-    transporter.sendMail(mailOptions, (error, info) => {
+    transporter.sendMail(mailOptions(nom,email,message), (error, info) => {
         if (error) {
             return console.log(error);
         }
