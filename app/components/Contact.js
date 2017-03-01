@@ -6,9 +6,6 @@ export default class Contact extends Component {
     constructor() {
         super();
         this.onSubmit = this.handleSubmit.bind(this);
-        this.state = {
-            msgEnvoye: false
-        }
     }
 
     handleSubmit(e) {
@@ -28,9 +25,7 @@ export default class Contact extends Component {
             })
         }).then(function(response) {
             if(response.status === 200){
-                this.setState = {
-                    msgEnvoye: true
-                }
+                console.log("message envoyé! yay!")
             }
         });
     }
