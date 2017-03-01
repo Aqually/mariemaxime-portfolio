@@ -29,9 +29,7 @@ let mailOptions = {
 };
 
 app.post('/contact', function(req, res) {
-    console.log(req);
     var data = req.body;
-    console.log(data);
     console.log(req.body.data)
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
