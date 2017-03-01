@@ -8,6 +8,7 @@ const bodyParser = require('body-parser')
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 // parse application/json
 app.use(bodyParser.json())
 
@@ -35,7 +36,7 @@ let mailOptions = {
     html: '<b>Hello world ?</b>' // html body
 };
 
-app.post('/contact', function(req, res) {
+app.post('/contact', urlencodedParser, function(req, res) {
     console.log(req.body);
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
