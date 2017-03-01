@@ -24,12 +24,12 @@ app.post('/contact', function(req, res) {
 
     console.log(req.body);
     var data = req.body;
-
+    console.log(data);
     smtpTransport.sendMail({
         from: "Sender Name <sender@gmail.com>",
         to: "Receiver Name <reciver@gmail.com>",
         subject: "Confirmation Mail",
-        text: "Messege From " + data.nom
+        text: "Messege From ";
     }, function(error, response) { //callback
         if (error) {
             console.log(error);
