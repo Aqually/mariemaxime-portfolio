@@ -20,25 +20,24 @@ var smtpTransport = nodemailer.createTransport({
     }
 });
 
+let mailOptions = {
+    from: '"Fred Foo 👻" <mariemaximetanguay@gmail.com>', // sender address
+    to: 'mariemaximetanguay@gmail.com', // list of receivers
+    subject: 'Hello ✔', // Subject line
+    text: 'Hello world ?', // plain text body
+    html: '<b>Hello world ?</b>' // html body
+};
+
 app.post('/contact', function(req, res) {
 
     console.log(req.body);
     var data = req.body;
     console.log(data);
-    smtpTransport.sendMail({
-        from: "Sender Name <sender@gmail.com>",
-        to: "Receiver Name <reciver@gmail.com>",
-        subject: "Confirmation Mail",
-        text: "Messege From "
-    }, function(error, response) { //callback
-        if (error) {
-            console.log(error);
-        } else {
-            console.log(" Message sent");
-        }
-        smtpTransport.close(); // shut down the connection pool, no more messages. Comment this line out to continue sending emails.
-    });
-    res.json(data);
+    smtpTransport.sendMail(mailOptions, (error, info) => {
+    if (error) {
+        return console.log(error);
+    }
+    console.log('Message %s sent: %s', info.messageId, info.response);
 });
 
 app.listen(port);
