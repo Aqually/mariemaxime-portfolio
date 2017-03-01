@@ -39,9 +39,9 @@ function mailOptions(nom, email, message){
     return msg;
 };
 
-app.post('/contact', urlencodedParser, function(req, res) {
+app.post('/contact', urlencodedParser, (req, res) => {
     console.log(req.body.nom);
-    transporter.sendMail(mailOptions(nom,email,message), (error, info) => {
+    transporter.sendMail(mailOptions(req.body.nom,req.body.email,req.body.message), (error, info) => {
         if (error) {
             return console.log(error);
         }
