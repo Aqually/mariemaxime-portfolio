@@ -32,14 +32,13 @@ export default class Contact extends Component {
                     msgEnvoye: true
                 }
             }
-        }
+        });
     }
 
     render() {
         return (
             <section id="contact">
                 <h2>{this.props.contact.titre}</h2>
-                {//faire des trucs si le state msgEnvoye est true ou false}
                 <form onSubmit={this.onSubmit}>
                     <div>
                         <input type="text" id="name" ref="nom" name="user_name" placeholder={this.props.contact.nom}/>
