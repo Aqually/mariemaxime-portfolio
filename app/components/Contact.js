@@ -23,7 +23,7 @@ class Contact extends Component {
             if(response.status === 200){
                 console.log("message envoyé! yay!")
                 this.setState({
-                    msgEnvoie: true;
+                    msgEnvoie: true
                 })
             }else{
                 console.warn("erreur!")
