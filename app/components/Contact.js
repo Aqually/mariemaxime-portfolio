@@ -29,12 +29,21 @@ class Contact extends Component {
 
     handleClick(){
         this.setState({
-            msgEnvoie: false
+            msgEnvoie: false,
+            msgEstSoumis: false
         })
     }
 
     handleSubmit(e) {
         e.preventDefault();
+
+        if(!this.state.msgEstSoumis){
+            return;
+        }
+
+        this.setState({
+            msgEstSoumis: true
+        })
         const lesDonnees = {
             nom: this.refs.nom.value,
             email: this.refs.email.value,
@@ -44,7 +53,7 @@ class Contact extends Component {
         this.props.sendEmail(lesDonnees).then((response) => {
             if (response.status === 200) {
                 console.log("message envoyé! yay!")
-                this.setState({msgEnvoie: true})
+                this.setState({msgEnvoie: true, msgEstSoumis: false})
             } else {
                 console.warn("erreur!")
             }
