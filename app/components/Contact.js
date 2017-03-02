@@ -66,8 +66,4 @@ class Contact extends Component {
     }
 }
 
-function mapStateToProps(state){
-    return {email: state.email}
-}
-
-export default connect(mapStateToProps,{sendEmail})(Contact);
+export default connect(null,{sendEmail})(Contact);

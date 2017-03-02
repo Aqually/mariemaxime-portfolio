@@ -3,8 +3,7 @@ import PortFolioReducer from "./reducer_portfolio";
 import SendEmailReducer from "./reducer_email";
 
 const rootReducer = combineReducers({
-  portfolio: PortFolioReducer,
-  email: SendEmailReducer
+    portfolio: PortFolioReducer
 });
 
 export default rootReducer;
