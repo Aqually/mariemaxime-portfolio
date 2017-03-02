@@ -13,10 +13,10 @@ class Contact extends Component {
     onSubmitMail(e) {
         e.preventDefault();
         const lesDonnees = {
-            nom: this.refs.nom.value,
-            email: this.refs.email.value,
-            message: this.refs.message.value
-        }
+            nom: React.findDOMNode(this.refs.nom).value,
+            email: React.findDOMNode(this.refs.email).value,
+            message: React.findDOMNode(this.refs.message).value
+        };
 
         this.props.sendEmail(lesDonnees)
             .then(function(response) {
