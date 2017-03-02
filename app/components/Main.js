@@ -3,6 +3,7 @@ import _ from 'lodash';
 import Menu from "./Menu";
 import Intro from "./Intro";
 import Portfolio from "./Portfolio";
+import Propos from "./Propos";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import {connect} from "react-redux";
@@ -23,6 +24,7 @@ class Main extends Component {
                 <Menu menu={this.props.portfolio.menu} />
                 <Intro intro={this.props.portfolio.intro} />
                 <Portfolio projets={this.props.portfolio.projets} />
+                <Propos />
                 <Contact contact={this.props.portfolio.contact} />
                 <Footer footer={this.props.portfolio.footer}/>
             </main>
