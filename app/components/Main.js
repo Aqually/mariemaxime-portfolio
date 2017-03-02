@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import _ from 'lodash';
 import Menu from "./Menu";
 import Intro from "./Intro";
 import Portfolio from "./Portfolio";
@@ -14,7 +15,7 @@ class Main extends Component {
     }
 
     render() {
-        if(this.props.portfolio === {}){
+        if( _.isEmpty({this.props.portfolio}) ){
             return (<div></div>);
         }
         return (
