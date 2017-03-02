@@ -20,7 +20,7 @@ class Contact extends Component {
         }
 
         this.props.sendEmail(lesDonnees)
-            .then(function(response) {
+            .then( (response) => {
                 if(response.status === 200){
                     console.log("message envoyé! yay!")
                     this.setState({
