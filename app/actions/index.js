@@ -2,7 +2,7 @@ import Firebase from "firebase";
 import axios from "axios";
 
 export const FETCH_PORTFOLIO ="FETCH_PORTFOLIO";
-expost const SEND_EMAIL = "SEND_EMAIL";
+export const SEND_EMAIL = "SEND_EMAIL";
 
 //les configs de firebase
 const config = {
