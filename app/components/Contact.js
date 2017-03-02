@@ -20,10 +20,17 @@ const style = {
 class Contact extends Component {
     constructor() {
         super();
-        this.onSubmit = this.handleSubmit.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClick = this.handleClick.bind(this)
         this.state = {
             msgEnvoie: false
         };
+    }
+
+    handleClick(){
+        this.setState({
+            msgEnvoie: false
+        })
     }
 
     handleSubmit(e) {
@@ -46,7 +53,7 @@ class Contact extends Component {
 
     renderForm() {
         return (
-            <form onSubmit={this.onSubmit}>
+            <form onSubmit={this.handleSubmit}>
                 <div>
                     <input type="text" id="name" ref="nom" name="user_name" placeholder={this.props.contact.nom} required/>
                     <input type="email" id="mail" ref="email" name="user_mail" placeholder={this.props.contact.couriel} required/>
@@ -59,7 +66,10 @@ class Contact extends Component {
 
     renderConfirmeEmail() {
         return (
-            <div className="msgEnvoie"> Message envoyé avec succès!</div>
+            <div className="msgEnvoie">
+                Message envoyé avec succès!
+                <span onClick={this.handleClick}className="autreMsg">envoyé un autre message</span>
+            </div>
         )
     }
 
