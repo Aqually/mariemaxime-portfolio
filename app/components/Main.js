@@ -10,12 +10,11 @@ import {fetchPortFolio} from "../actions";
 class Main extends Component {
 
     componentWillMount() {
-        console.log(this.props);
         this.props.fetchPortFolio();
     }
 
     render() {
-        if(this.props.portfolio.menu === undefined){
+        if(this.props.portfolio === {}){
             return (<div></div>);
         }
         return (
