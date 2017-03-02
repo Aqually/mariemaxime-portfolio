@@ -13,9 +13,9 @@ class Contact extends Component {
     handleSubmit(e) {
         e.preventDefault();
         const lesDonnees = {
-            nom: self.refs.nom.value,
-            email: self.refs.email.value,
-            message: self.refs.message.value
+            nom: this.refs.nom.value,
+            email: this.refs.email.value,
+            message: this.refs.message.value
         }
 
         this.props.sendEmail(lesDonnees)
