@@ -19,9 +19,9 @@ class Contact extends Component {
         }
 
         this.props.sendEmail(lesDonnees)
-            .then(
+            .then( () => {
                 console.log("test");
-            )
+            })
 
         /*
         e.preventDefault();
