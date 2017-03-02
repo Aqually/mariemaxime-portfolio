@@ -37,7 +37,7 @@ class Contact extends Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        if(!this.state.msgEstSoumis){
+        if(this.state.msgEstSoumis){
             return;
         }
 
