@@ -7,10 +7,10 @@ import {sendEmail} from "../actions";
 class Contact extends Component {
     constructor() {
         super();
-        this.onSubmit = this.handleSubmit.bind(this);
+        this.onSubmit = this.onSubmitMail.bind(this);
     }
 
-    handleSubmit(e) {
+    onSubmitMail(e) {
         e.preventDefault();
         const lesDonnees = {
             nom: this.refs.nom.value,
@@ -25,44 +25,20 @@ class Contact extends Component {
                 }else{
                     console.warn("erreur!")
                 }
-            });
-
-        /*
-        e.preventDefault();
-        var self = this;
-        console.log(this.refs.nom.value);
-
-        fetch('./contact', {
-            method: 'POST',
-            headers: {
-                'Accept' : 'application/json',
-                'Content-Type' : 'application/json',
-            },
-            body: JSON.stringify({
-                nom: self.refs.nom.value,
-                email: self.refs.email.value,
-                message: self.refs.message.value
-            })
-        }).then(function(response) {
-            if(response.status === 200){
-                console.log("message envoyé! yay!")
-            }else{
-                console.warn("erreur!")
             }
-        });
-        */
+        );
     }
 
     render() {
         return (
             <section id="contact">
                 <h2>{this.props.contact.titre}</h2>
-                <form onSubmit={this.onSubmit}>
+                <form onSubmit={this.onSubmitMail}>
                     <div>
-                        <input type="text" id="name" ref="nom" name="user_name" placeholder={this.props.contact.nom}/>
-                        <input type="email" id="mail" ref="email" name="user_mail" placeholder={this.props.contact.couriel}/>
+                        <input type="text" id="name" ref="nom" name="user_name" placeholder={this.props.contact.nom} required />
+                        <input type="email" id="mail" ref="email" name="user_mail" placeholder={this.props.contact.couriel} required />
                     </div>
-                    <textarea id="msg" name="user_message" ref="message" placeholder={this.props.contact.message}></textarea>
+                    <textarea id="msg" name="user_message" ref="message" placeholder={this.props.contact.message} required></textarea>
                     <button type="submit">Envoyer</button>
                 </form>
             </section>

@@ -1,5 +1,4 @@
 import Firebase from "firebase";
-import axios from "axios";
 
 export const FETCH_PORTFOLIO ="FETCH_PORTFOLIO";
 export const SEND_EMAIL = "SEND_EMAIL";
