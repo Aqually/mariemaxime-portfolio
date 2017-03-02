@@ -19,16 +19,18 @@ class Contact extends Component {
             message: this.refs.message.value
         }
 
-        this.props.sendEmail(lesDonnees).then(function(response) {
-            if(response.status === 200){
-                console.log("message envoyé! yay!")
-                this.setState({
-                    msgEnvoie: true
-                })
-            }else{
-                console.warn("erreur!")
+        this.props.sendEmail(lesDonnees)
+            .then(function(response) {
+                if(response.status === 200){
+                    console.log("message envoyé! yay!")
+                    this.setState({
+                        msgEnvoie: true
+                    })
+                }else{
+                    console.warn("erreur!")
+                }
             }
-        });
+        );
     }
 
     renderForm(){
