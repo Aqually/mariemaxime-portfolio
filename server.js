@@ -33,7 +33,7 @@ function mailOptions(nom, email, message){
     let msg = {
         from: nom + '<' + email + '>', // sender address
         to: 'mariemaximetanguay@gmail.com', // list of receivers
-        subject: nom + 'a envoyé un message de MarieMaxime.me ✔', // Subject line
+        subject: nom + ' a envoyé un message de MarieMaxime.me ✔', // Subject line
         text: message, // plain text body
         html: '<p>' + message + '</p> <p>email: ' + email + ' </p> <p>nom: ' + nom + ' </p>' // html body
     }
