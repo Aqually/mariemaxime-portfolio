@@ -68,7 +68,7 @@ class Contact extends Component {
         return (
             <div className="msgEnvoie">
                 Message envoyé avec succès!
-                <span onClick={this.handleClick}className="autreMsg">envoyé un autre message</span>
+                <span onClick={this.handleClick}className="autreMsg">envoyer un autre message</span>
             </div>
         )
     }
