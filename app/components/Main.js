@@ -15,7 +15,7 @@ class Main extends Component {
     }
 
     render() {
-        if( _.isEmpty({this.props.portfolio}) ){
+        if( _.isEmpty(this.props.portfolio) ){
             return (<div></div>);
         }
         return (
