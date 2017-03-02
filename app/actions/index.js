@@ -35,6 +35,6 @@ export function sendEmail(data){
                 'Content-Type' : 'application/json',
             },
             body: JSON.stringify(data)
-        }
+        })
     }
 }
