@@ -27,7 +27,15 @@ export function fetchPortFolio(){
 };
 
 export function sendEmail(data){
-    const request = axios.post('./contact', data)
+    //const request = axios.post('./contact', data)
+    const request = fetch('./contact', {
+        method: 'POST',
+        headers: {
+            'Accept' : 'application/json',
+            'Content-Type' : 'application/json',
+        },
+        body: JSON.stringify(data)
+    })
     return {
         type: SEND_EMAIL,
         payload: request

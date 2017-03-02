@@ -19,9 +19,13 @@ class Contact extends Component {
         }
 
         this.props.sendEmail(lesDonnees)
-            .then( () => {
-                console.log("test");
-            })
+            .then(function(response) {
+                if(response.status === 200){
+                    console.log("message envoyé! yay!")
+                }else{
+                    console.warn("erreur!")
+                }
+            });
 
         /*
         e.preventDefault();
