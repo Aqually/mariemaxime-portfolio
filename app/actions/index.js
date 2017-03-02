@@ -27,7 +27,7 @@ export function fetchPortFolio(){
 
 export function sendEmail(data){
     return dispatch => {
-        return fetch('./contact', {
+        fetch('./contact', {
             method: 'POST',
             headers: {
                 'Accept' : 'application/json',
