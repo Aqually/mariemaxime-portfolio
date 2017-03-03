@@ -9,7 +9,7 @@ const config = {
     apiKey: 'AIzaSyCyI4Xhgdz-oKDcdnvIrXMGO2B-WL6zsck',
     databaseURL: 'https://blog-d25af.firebaseio.com/',
     authDomain: "https://blog-d25af.firebaseapp.com",
-    storageBucket: "blog-d25af.appspot.com"
+    storageBucket: "https://blog-d25af.appspot.com"
 };
 
 //initialiser Firebase
