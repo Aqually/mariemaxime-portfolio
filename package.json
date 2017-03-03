@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/Aqually/mariemaxime-blog#readme",
   "dependencies": {
-    "axios": "^0.15.3",
     "babel-loader": "^6.2.10",
     "body-parser": "^1.16.1",
     "firebase": "^3.6.9",
@@ -34,7 +33,6 @@
     "react-dom": "^15.4.1",
     "react-redux": "^5.0.2",
     "redux": "^3.6.0",
-    "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0",
     "webpack": "^1.14.0"
   },
