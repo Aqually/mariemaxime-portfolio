@@ -1,13 +1,18 @@
 import React, {Component} from "react";
-
 const iconGit = require('../icons/github.png');
 const iconLink = require('../icons/link.png');
+
+const url = "portfolio/tetrabloc.jpg";
 
 export default class Projets extends Component {
 
     render() {
+        const style = {
+            backgroundImage: 'url(' + this.props.projet.url + ')',
+        }
+
         return (
-            <article className={"projet " + this.props.projet.classe}>
+            <article style={style} className={"projet "}>
                 <div>
                     <h3>{this.props.projet.titre}</h3>
                     <p>{this.props.projet.description}</p>

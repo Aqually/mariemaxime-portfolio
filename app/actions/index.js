@@ -1,7 +1,6 @@
 import firebase from "firebase";
 
 export const FETCH_PORTFOLIO = "FETCH_PORTFOLIO";
-export const FETCH_IMAGE = "FETCH_IMAGE";
 export const SEND_EMAIL = "SEND_EMAIL";
 
 //les configs de firebase
@@ -9,7 +8,7 @@ const config = {
     apiKey: 'AIzaSyCyI4Xhgdz-oKDcdnvIrXMGO2B-WL6zsck',
     databaseURL: 'https://blog-d25af.firebaseio.com/',
     authDomain: "https://blog-d25af.firebaseapp.com",
-    storageBucket: "https://blog-d25af.appspot.com"
+    storageBucket: "blog-d25af.appspot.com"
 };
 
 //initialiser Firebase
@@ -30,26 +29,28 @@ export function fetchPortFolio() {
     };
 };
 
+/*
 //récuperer une image de firebase storage
 export function fetchImage(img) {
     return dispatch => {
         const imgRef = storageRef.child(img);
-        firebase.auth().signInAnonymously().then(() => {
-            imgRef.getDownloadURL().then((url) => {
-                dispatch({
+        imgRef.getDownloadURL().then((url) => {
+                dispatch ({
                     type: FETCH_IMAGE,
                     payload: url
                 })
-            }).catch(function(error) {
-                console.error(error);
+
+        }).catch(function(error) {
+            console.error(error);
                 dispatch({
                     type: FETCH_IMAGE,
                     payload: "blank.jpg"
                 })
-            });
+
         });
     }
 }
+*/
 
 export function sendEmail(data) {
     return dispatch => {

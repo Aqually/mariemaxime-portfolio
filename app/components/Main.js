@@ -16,7 +16,7 @@ class Main extends Component {
     }
 
     render() {
-        if( _.isEmpty(this.props.portfolio) ){
+        if( this.props.portfolio === undefined){
             return (<div></div>);
         }
         return (
@@ -33,7 +33,7 @@ class Main extends Component {
 }
 
 function mapStateToProps(state){
-    return {portfolio: state.portfolio}
+    return {portfolio: state.portfolio.portfolio}
 }
 
 export default connect(mapStateToProps,{fetchPortFolio})(Main);
