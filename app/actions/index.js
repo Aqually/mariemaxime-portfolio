@@ -20,7 +20,7 @@ const storageRef = storage.ref();
 //fonction pour fetch les donner du portfolio de firebase
 export function fetchPortFolio() {
     return dispatch => {
-        database.once("value", snapshot => {
+        database.on("value", snapshot => {
             dispatch({
                 type: FETCH_PORTFOLIO,
                 payload: snapshot.val()
@@ -28,29 +28,6 @@ export function fetchPortFolio() {
         });
     };
 };
-
-/*
-//récuperer une image de firebase storage
-export function fetchImage(img) {
-    return dispatch => {
-        const imgRef = storageRef.child(img);
-        imgRef.getDownloadURL().then((url) => {
-                dispatch ({
-                    type: FETCH_IMAGE,
-                    payload: url
-                })
-
-        }).catch(function(error) {
-            console.error(error);
-                dispatch({
-                    type: FETCH_IMAGE,
-                    payload: "blank.jpg"
-                })
-
-        });
-    }
-}
-*/
 
 export function sendEmail(data) {
     return dispatch => {
