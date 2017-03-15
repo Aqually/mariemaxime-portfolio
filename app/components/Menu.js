@@ -6,7 +6,7 @@ export default class Menu extends Component{
     renderListeMenu(){
         const liens = _.sortBy(this.props.menu, 'id');
         return _.map(liens, (lien, key) => {
-            return (<li key={lien.titre}><a className="nav-item" href="#">{lien.titre}</a></li>);
+            return (<li key={lien.titre}><a className="nav-item" href={lien.url}>{lien.titre}</a></li>);
         });
     }
 
